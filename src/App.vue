@@ -18,7 +18,7 @@
 <style>
   #app {
     text-align: center;
-    background: #f0f0f0;
+    background: #e7e7e7;
   }
   .el-main{
     background:#fff;
@@ -46,8 +46,8 @@
     text-align: center;
   }
   .el-main .search .el-button--primary {
-    background-color: #008aff !important;
-    border-color:  #008aff !important;
+    background-color: #4200ff !important;
+    border-color:  #4200ff !important;
     border-radius: 0;
   }
   .el-main .search .add{
@@ -57,7 +57,7 @@
     text-align: center!important;
   }
   .el-pager li.active {
-    background: #0086f7!important;
+    background: #007eff!important;
     color: #fff;
   }
   .el-pager li{
@@ -111,4 +111,39 @@
   .el-menu-item-group__title{
     padding: 0;
   }
+  .el-aside{
+     height: 870px;
+     background:#fff;
+   }
+  .el-aside .el-submenu__title,.el-menu-item, .el-submenu__title{
+    color:#333;
+    font-weight: bolder;
+    font-size:14px;
+    height: 59px;
+    line-height: 59px;
+  }
+  .el-aside .el-menu-item-group .el-menu-item{
+    color:#333!important;
+    line-height: 34px!important;
+    height: 34px!important;
+    font-weight: normal;
+  }
+  .el-aside .el-submenu .el-menu-item{
+    min-width: 200px;
+  }
+  /*左侧侧边栏的标题*/
+  .el-aside .submenu li.leftTitle{
+    background: #4200ff;
+    color:#fff;
+    text-align: center!important;
+    border:none!important;
+    height: 70px;
+    line-height: 70px;
+    font-size: 20px;
+    font-weight: bolder;
+  }
+  .el-aside .submenu li:nth-of-type(1){
+    text-align: center;
+  }
+
 </style>

@@ -1,7 +1,27 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Header from '@/components/Header'
 import Data from "../pages/Data/Data"
+//日常办公平台
+import Daily from '../pages/Daily/Daily'
+import WorkingDeptPlan from '../pages/Daily/Working/DeptPlan'
+import WorkingMyPlan from '../pages/Daily/Working/MyPlan'
+import WorkingArrangePlan from '../pages/Daily/Working/ArrangePlan'
+import NoticeManage from '../pages/Daily/Notice/NoticeMange'
+import WorkingLog from '../pages/Daily/Log/Log'
+import WorkingLogAudit from '../pages/Daily/Log/LogAudit'
+import EssayColumn from '../pages/Daily/Publicity/Column'
+import EssayManage from '../pages/Daily/Publicity/Advertise'
+import EssayCarousel from '../pages/Daily/Publicity/Carousel'
+//人员画像平台
+import Portrayal from '../pages/Portrayal/Portrayal'
+import DrugPersonalInfo from '../pages/Portrayal/DrugPersonal/PeopleInfo'
+import HealthOperate from '../pages/Portrayal/HealthInfo/Operate'
+import HealthPatient from '../pages/Portrayal/HealthInfo/Patient'
+import HealthProve from '../pages/Portrayal/HealthInfo/Prove'
+import PoliceInfo from '../pages/Portrayal/PolicePersonal/PoliceInfo'
+//安防平台
+import AnFang from '../pages/AnFang/AnFang'
+import VideoRecord from '../pages/AnFang/Video/Record'
 
 Vue.use(Router)
 
@@ -9,13 +29,159 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Header',
-      component:Header
+      redirect: '/daily'
     },
     {
       path: '/data',
       name: 'Data',
-      component:Data
-    }
+      component: Data
+    },
+    //  日常办公平台
+    {
+      path: '/daily',
+      component:Daily,
+      meta: {
+        showHeader: true
+      },
+      children: [
+        {
+          path: '/daily/plan/dept',
+          component: WorkingDeptPlan,
+          meta: {
+            showHeader: true
+          }
+        },
+        {
+          path: '/daily/plan/my',
+          component:WorkingMyPlan,
+          meta: {
+            showHeader: true
+          }
+        },
+        {
+          path: '/daily/plan/undo',
+          component: WorkingArrangePlan,
+          meta: {
+            showHeader: true
+          }
+        },
+        {
+          path: '/daily/notice',
+          component:NoticeManage,
+          meta: {
+            showHeader: true
+          }
+        },
+        {
+          path: '/daily/logmanage/log',
+          component: WorkingLog,
+          meta: {
+            showHeader: true
+          }
+        },
+        {
+          path: '/daily/logmanage/audit',
+          component: WorkingLogAudit,
+          meta: {
+            showHeader: true
+          }
+        },
+        {
+          path: '/daily/advertise/essay',
+          component: EssayManage,
+          meta: {
+            showHeader: true
+          }
+        },
+        {
+          path: '/daily/essay/column',
+          component: EssayColumn,
+          meta: {
+            showHeader: true
+          }
+        },
+        {
+          path: '/daily/essay/carousel',
+          component: EssayCarousel,
+          meta: {
+            showHeader: true
+          }
+        },
+        {
+          path:'/daily',
+          redirect:'/daily/plan/dept'
+        }
+      ],
+    },
+    //  人员画像平台
+    {
+      path: '/portrayal',
+      component:Portrayal,
+      meta: {
+        showHeader: true
+      },
+      children: [
+        {
+          path: '/personal/drug/info',
+          component:DrugPersonalInfo,
+          meta: {
+            showHeader: true
+          }
+        },
+        {
+          path: '/personal/health/HIS/patient',
+          component:HealthPatient,
+          meta: {
+            showHeader: true
+          }
+        },
+        {
+          path: '/personal/health/HIS/operate',
+          component:HealthOperate,
+          meta: {
+            showHeader: true
+          }
+        },
+        {
+          path: '/personal/health/HIS/prove',
+          component:HealthProve,
+          meta: {
+            showHeader: true
+          }
+        },
+        {
+          path: '/personal/police',
+          component:PoliceInfo,
+          meta: {
+            showHeader: true
+          }
+        },
+        {
+          path:'/portrayal',
+          redirect:'/personal/health/HIS/operate'
+        }
+      ],
+    },
+    //  安防平台
+    {
+      path: '/anfang',
+      component:AnFang,
+      meta: {
+        showHeader: true
+      },
+      children: [
+        {
+          path: '/anFang/video/record',
+          component:VideoRecord,
+          meta: {
+            showHeader: true
+          }
+        },
+        {
+          path:'/anfang',
+          redirect:'/anFang/video/record'
+        }
+      ],
+    },
   ]
 })

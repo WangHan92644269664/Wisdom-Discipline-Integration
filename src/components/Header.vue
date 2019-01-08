@@ -1,8 +1,8 @@
 <template>
   <el-container>
-    <el-header style="background: #055295;box-shadow: 4px 0 20px rgba(0,0,0,0.3);height: 70px;">
+    <el-header style="background: #181818;box-shadow: 4px 0 20px rgba(0,0,0,0.3);height: 70px;">
       <el-row>
-        <el-col :xl="7" :lg="5" style="color:#fff;text-align: left;padding-top: 13px;font-size:26px">
+        <el-col :xl="7" :lg="5" style="color:#fdfdfd;text-align: left;line-height: 70px;height: 70px;font-size:27px">
           <img :src="left" alt="" style="margin-right: 10px;">智慧戒管一体化平台
         </el-col>
         <el-col :xl="14" :lg="16"  style="text-align: center;margin:0 auto;" id="two">
@@ -11,9 +11,9 @@
             class="el-menu-demo"
             mode="horizontal"
             @select="handleSelect"
-            background-color="#055295"
+            background-color="#181818"
             text-color="#fff"
-            active-text-color="#fff" router>
+            active-text-color="#007eff" router>
             <el-menu-item index="/" class="left">首页</el-menu-item>
             <el-menu-item index="/anfang">安防平台</el-menu-item>
             <el-menu-item index="/portrayal">人员面像平台</el-menu-item>
@@ -48,7 +48,7 @@
       return {
         activeIndex: '/working',
         header:require('./images/header.jpg'),
-        left:require('./images/nav_icon.png')
+        left:require('./images/logo.png')
       };
     },
     methods: {
@@ -65,24 +65,25 @@
   border-bottom: none!important;
 }
 #headerBtn{
-  background: #0077df;
-  font-size:12px;
-  color:#222;
+  background: #777;
+  font-size:14px;
+  color:#17232f;
   border:none;
-  padding: 7px 12px;
+  font-weight: bolder;
+  padding: 8px 13px;
  position: relative;
-  top: 7px;
+  top: 4px;
 }
   .el-menu--horizontal > .el-menu-item {
-    border-bottom: none !important;
     line-height: 70px;
     height: 70px;
     font-size: 16px;
   }
 
   .el-menu--horizontal > .el-menu-item.is-active {
-    border-bottom: none;
-    background: #0088ff !important;
+    border-bottom:5px solid #007eff!important;
+    background: none !important;
+    font-weight: bolder;
   }
 
   .iconfont {
