@@ -6,7 +6,9 @@
       </div>
       <span class="back-index">返回首页</span>
       <el-col class="common-height" :span="5">
-        <div class="bili-chart">1</div>
+        <div class="bili-chart">
+          <Pie3DChart class="pie3DChart" :id="id" :option="option"/>
+        </div>
         <div class="data-table">1</div>
         <div class="common-chart">1</div>
       </el-col>
@@ -24,14 +26,67 @@
   </div>
 </template>
 <script>
+import Pie3DChart from "../../components/Data/Pie3Dchart"
 export default {
   name: "Data",
   data() {
     return {
-      screenHeight: document.documentElement.clientHeight //屏幕高度
+      screenHeight: document.documentElement.clientHeight, //屏幕高度
+      option: {
+        colors: [
+          "#c73e6a",
+          "#e192a8",
+          "#ff8b4e",
+          "#fbd884",
+          "#08b170",
+          "#00b6e8",
+          "#8d7ce4"
+        ],
+        chart: {
+          backgroundColor: null,
+          type: "pie", //饼图
+          options3d: {
+            enabled: true, //使用3d功能
+            alpha: 60, //延y轴向内的倾斜角度
+            beta: 0
+          }
+        },
+        title: {
+          text: "重点事件比例分布", //图表的标题文字
+          style: {
+            color: "#fff"
+          },
+          align: "left"
+        },
+        plotOptions: {
+          pie: {
+            allowPointSelect: true, //每个扇块能否选中
+            cursor: "pointer", //鼠标指针
+            depth: 15, //饼图的厚度
+            dataLabels: {
+              enabled: true //是否显示饼图的线形tip
+            }
+          }
+        },
+        series: [
+          {
+            type: "pie",
+            // name: "测试用1", //统一的前置词,非必须
+            data: [
+              ["待接收", 12], //模块名和所占比，也可以{name: '测试1',y: 12}
+              ["待派遣", 23],
+              ["待处理", 19],
+              ["已废弃", 29],
+              ["待核查", 29],
+              ["待结案", 29],
+              ["待延期审核", 29]
+            ]
+          }
+        ]
+      }
     };
   },
-  components: {},
+  components: {Pie3DChart},
   mounted() {
     var _this = this;
     //页面加载时赋值id全屏高度
@@ -91,6 +146,9 @@ export default {
 }
 .bili-chart {
   height: 28%;
+}
+.bili-chart div {
+  height: 100%;
 }
 .data-table {
   height: 40%;

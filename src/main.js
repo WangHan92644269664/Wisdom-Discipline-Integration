@@ -6,6 +6,7 @@ import router from './router'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 // 引入highchart
+import highcharts from 'highcharts'
 import highcharts3d from 'highcharts/highcharts-3d'
 highcharts3d(highcharts)
 //引入echarts 
