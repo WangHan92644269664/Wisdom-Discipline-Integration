@@ -14,7 +14,7 @@ export default new Router({
     },
     {
       path: '/data',
-      name: 'Header',
+      name: 'Data',
       component:Data
     }
   ]
