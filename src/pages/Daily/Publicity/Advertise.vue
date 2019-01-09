@@ -63,22 +63,6 @@
             ]
           },
           {
-            label: '谷渡街道办事处简介',
-            children:[
-              {
-                label: '政务公开',
-              }
-            ]
-          },
-          {
-            label: '党建服务中心简介',
-            children:[
-              {
-                label: '政务公开',
-              }
-            ]
-          },
-          {
             label: '社区简介',
             children:[
               {

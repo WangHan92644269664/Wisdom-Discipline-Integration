@@ -14,7 +14,7 @@
             background-color="#181818"
             text-color="#fff"
             active-text-color="#007eff" router>
-            <el-menu-item index="/" class="left">首页</el-menu-item>
+            <el-menu-item index="/home" class="left">首页</el-menu-item>
             <el-menu-item index="/anfang">安防平台</el-menu-item>
             <el-menu-item index="/portrayal">人员面像平台</el-menu-item>
             <el-menu-item index="/zongzhi">戒治综合平台</el-menu-item>
@@ -47,7 +47,7 @@
     data() {
       return {
         activeIndex: '/working',
-        header:require('./images/header.jpg'),
+        header:require('./images/header1.jpg'),
         left:require('./images/logo.png')
       };
     },

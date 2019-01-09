@@ -13,7 +13,7 @@
         <template slot="title">医疗HIS系统</template>
         <el-menu-item-group>
           <el-menu-item index="/personal/health/HIS/patient">患者管理</el-menu-item>
-          <el-menu-item index="/personal/health/HIS/operate">经营管理</el-menu-item>
+          <el-menu-item index="#/personal/health/HIS/operate">经营管理</el-menu-item>
           <el-menu-item index="/personal/health/HIS/prove">诊断证明</el-menu-item>
         </el-menu-item-group>
       </el-submenu>
