@@ -53,9 +53,9 @@ export default {
       // 绘制图表
       myChart.setOption({
         grid: {
-          top: "9%",
+          top: "15%",
           left: "3%",
-          right: "9%",
+          right: "11%",
           bottom: "3%",
           containLabel: true
         },
@@ -64,7 +64,12 @@ export default {
             type: "category",
             data: this.chartData,
             axisLine: {
-              show: false
+              show: true,
+              lineStyle: {
+                color: "#6e7191",
+                width: 1,
+                type: "solid"
+              }
             },
             name: this.xName,
             nameTextStyle: {
@@ -78,7 +83,7 @@ export default {
             axisLabel: {
               show: true,
               textStyle: {
-                color: "#00c7ff"
+                color: "#9394a3"
               }
             }
           }
@@ -95,10 +100,16 @@ export default {
               fontFamily: "Microsoft YaHei",
               color: "#fbd101"
             },
+             axisLabel: {
+              show: true,
+              textStyle: {
+                color: "#9394a3"
+              }
+            },
             axisLine: {
               show: true,
               lineStyle: {
-                color: "#fff",
+                color: "#6e7191",
                 width: 1,
                 type: "solid"
               }
