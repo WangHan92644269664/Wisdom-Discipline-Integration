@@ -1,6 +1,6 @@
 <template>
     <div>
-       全息
+       病例
     </div>
 </template>
 <script>

@@ -26,8 +26,10 @@ import PoliceInfo from '../pages/Portrayal/PolicePersonal/PoliceInfo'
 import AnFang from '../pages/AnFang/AnFang'
 import VideoRecord from '../pages/AnFang/Video/Record'
 //戒治综合平台
-import Jiezhi from '../pages/Jiezhi/jiezhi'
-import Bingli from '../pages/Jiezhi/content/bingli'
+import Jiezhi from '../pages/Jiezhi/JieZhi'
+import Bingli from '../pages/Jiezhi/Content/BingLi'
+import GuanXi from '../pages/Jiezhi/Content/GuanXi'
+import QuanXi from '../pages/Jiezhi/Content/QuanXi'
 Vue.use(Router)
 
 export default new Router({
@@ -196,6 +198,33 @@ export default new Router({
       meta: {
         showHeader: true
       },
+      children: [
+        {
+          path: '/zongzhi/bingli',
+          component:Bingli,
+          meta: {
+            showHeader: true
+          }
+        },
+        {
+          path: '/zongzhi/guanxi',
+          component:GuanXi,
+          meta: {
+            showHeader: true
+          }
+        },
+        {
+          path: '/zongzhi/quanxi',
+          component:QuanXi,
+          meta: {
+            showHeader: true
+          }
+        },
+        {
+          path:'/zongzhi',
+          redirect:'/zongzhi/bingli'
+        }
+      ]
     },
 
   ]
