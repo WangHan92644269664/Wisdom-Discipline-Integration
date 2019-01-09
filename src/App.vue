@@ -115,7 +115,7 @@
      height: 870px;
      background:#fff;
    }
-  .el-aside .el-submenu__title,.el-menu-item, .el-submenu__title{
+  .el-aside .el-submenu__title,.el-aside. el-menu-item, .el-submenu__title{
     color:#333;
     font-weight: bolder;
     font-size:14px;
@@ -126,7 +126,7 @@
     color:#333!important;
     line-height: 34px!important;
     height: 34px!important;
-    font-weight: normal;
+    font-weight: normal!important;
   }
   .el-aside .el-submenu .el-menu-item{
     min-width: 200px;
@@ -145,5 +145,22 @@
   .el-aside .submenu li:nth-of-type(1){
     text-align: center;
   }
+  #login .el-input__inner{
+    height: 30px!important;
+    line-height: 30px!important;
+    background-color:transparent !important;
+    border:1px solid transparent!important;
+    position: relative!important;
+    top:-5px!important;
+  }
+  #login .el-form-item{
+    margin-bottom: 8px!important;
+  }
+  #login input:-ms-input-placeholder{
+    color: #676565!important;
+  }
 
+  #login input::-webkit-input-placeholder{
+    color: #676565!important;
+  }
 </style>

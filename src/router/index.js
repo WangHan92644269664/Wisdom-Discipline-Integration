@@ -2,6 +2,8 @@ import Vue from 'vue'
 import Router from 'vue-router'
 //首页
 import Home from '../pages/Home'
+//登录页面
+import Login from '../pages/Login'
 //大数据平台
 import Data from "../pages/Data/Data"
 //日常办公平台
@@ -36,7 +38,11 @@ export default new Router({
   routes: [
     {
       path: '/',
-     component:Home
+     component:Login
+    },
+    {
+      path:'/home',
+      component:Home
     },
     //大数据平台
     {
@@ -166,7 +172,7 @@ export default new Router({
         },
         {
           path:'/portrayal',
-          redirect:'/personal/health/HIS/operate'
+          redirect:'/personal/health/HIS/patient'
         }
       ],
     },

@@ -12,7 +12,7 @@
             <el-input v-model="formInline.name" placeholder="请输入姓名"></el-input>
           </el-form-item>
           <el-form-item label="身份证号:">
-            <el-input v-model="formInline.id" placeholder="请输入姓名"></el-input>
+            <el-input v-model="formInline.id" placeholder="请输入身份证号"></el-input>
           </el-form-item>
           <el-form-item class="search">
             <el-button type="primary" size="small"><img :src="search" alt="" style="margin-right: 8px;">查询</el-button>
@@ -55,10 +55,10 @@
       </el-table-column>
       <el-table-column
         prop="photo"
-        label="缩略图"
+        label="照片"
         width="160">
         <template slot-scope="scope">
-          <img :src="scope.row.photo" alt="" style="width: 50px;height: 30px;">
+          <img :src="scope.row.photo" alt="" style="width: 60px;height: 30px;">
         </template>
       </el-table-column>
       <el-table-column
@@ -132,6 +132,7 @@
             phone:'15464245952',
             card:'**************2465',
             beTime:'2018-04-21',
+            from:'河南省郑州市'
           }, {
             name:'张已',
             sex:'女',
@@ -141,6 +142,7 @@
             phone:'15464245952',
             card:'**************2465',
             beTime:'2018-04-21',
+            from:'河南省郑州市'
           }, {
             name:'张已',
             sex:'女',
@@ -150,6 +152,7 @@
             phone:'15464245952',
             card:'**************2465',
             beTime:'2018-04-21',
+            from:'河南省郑州市'
           }, {
             name:'张已',
             sex:'女',
@@ -159,6 +162,7 @@
             phone:'15464245952',
             card:'**************2465',
             beTime:'2018-04-21',
+            from:'河南省郑州市'
           },
           {
             name:'张已',
@@ -169,6 +173,7 @@
             phone:'15464245952',
             card:'**************2465',
             beTime:'2018-04-21',
+            from:'河南省郑州市'
           },
           {
             name:'张已',
@@ -179,6 +184,7 @@
             phone:'15464245952',
             card:'**************2465',
             beTime:'2018-04-21',
+            from:'河南省郑州市'
           },
         ],
       }

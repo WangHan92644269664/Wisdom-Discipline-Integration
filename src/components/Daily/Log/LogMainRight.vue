@@ -2,7 +2,7 @@
   <div>
     <el-row  class="mainRight">
       <el-col :span="24" class="borderBottom">
-        日志列表
+        工作日志列表
       </el-col>
     </el-row>
     <el-row style="padding-left: 30px;padding-top: 20px;background: #fff;">
