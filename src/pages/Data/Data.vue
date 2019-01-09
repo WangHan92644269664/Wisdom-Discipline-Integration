@@ -31,22 +31,101 @@
             <div class="info-top">
               <el-col :span="8">
                 <h5>现有学员总数</h5>
+                <div class="data-number">
+                  <span>2</span>
+                  <span>6</span>
+                  <span>5</span>
+                  <span>3</span>
+                  人
+                </div>
               </el-col>
               <el-col :span="8">
                 <h5>全年日均人数</h5>
+                <div class="data-number">
+                  <span>2</span>
+                  <span>6</span>
+                  <span>5</span>
+                  <span>3</span>
+                  人
+                </div>
               </el-col>
               <el-col :span="8">
                 <h5>累计戒治人数</h5>
+                <div class="data-number">
+                  <span>2</span>
+                  <span>6</span>
+                  <span>5</span>
+                  <span>3</span>
+                  人
+                </div>
               </el-col>
             </div>
-            <div class="info-bottom"></div>
+            <div class="info-bottom">
+              <div class="info-type">
+                <div class="info-img">
+                   <img src="../../assets/images/icon1.png" alt="">
+                </div>
+                <div class="info-unit">
+                  <span class="type-name">建筑物</span>
+                  <br>
+                  <span class="type-number">20 <i>栋</i></span>
+                </div>
+               
+                
+              </div>
+              <div class="info-type">
+                 <div class="info-img">
+                   <img src="../../assets/images/icon2.png" alt="">
+                </div>
+                <div class="info-unit">
+                  <span class="type-name">部件</span>
+                  <br>
+                  <span class="type-number">10 <i>件</i></span>
+                </div>
+              </div>
+              <div class="info-type">
+                 <div class="info-img">
+                   <img src="../../assets/images/icon3.png" alt="">
+                </div>
+                <div class="info-unit">
+                  <span class="type-name">走访</span>
+                  <br>
+                  <span class="type-number">10 <i>件</i></span>
+                </div>
+              </div>
+              <div class="info-type">
+                 <div class="info-img">
+                   <img src="../../assets/images/icon4.png" alt="">
+                </div>
+                <div class="info-unit">
+                  <span class="type-name">事件</span>
+                  <br>
+                  <span class="type-number">14 <i>件</i></span>
+                </div>
+              </div>
+              <div class="info-type">
+                 <div class="info-img">
+                   <img src="../../assets/images/icon1.png" alt="">
+                </div>
+                <div class="info-unit">
+                  <span class="type-name">组织</span>
+                  <br>
+                  <span class="type-number">12 <i>个</i></span>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="map-chart">
             <MapChart/>
           </div>
           <div class="common-chart1">
             <span class="chart-title1">一周内探访次数柱状图</span>
-            <HunheChart/>
+            <HunheChart
+              :xData="xData1"
+              :hunheXname="hunheXname1"
+              :hunheYname="hunheYname1"
+              :seriesData="seriesData1"
+            />
           </div>
         </el-col>
         <el-col class="common-height" :span="6">
@@ -76,14 +155,11 @@
           </div>
           <div class="common-chart">
             <span class="chart-title">学员复吸率统计图</span>
-            <BarChart
-              :chartData="chartData4"
-              :chartYdata="chartYdata4"
-              :colorZero="colorZero4"
-              :colorHalf="colorHalf4"
-              :colorAll="colorAll4"
-              :xName="xName4"
-              :yName="yName4"
+            <HunheChart
+              :xData="xData2"
+              :hunheXname="hunheXname2"
+              :hunheYname="hunheYname2"
+              :seriesData="seriesData2"
             />
           </div>
         </el-col>
@@ -92,6 +168,7 @@
   </div>
 </template>
 <script>
+import echarts from "echarts";
 import Pie3DChart from "../../components/Data/Pie3Dchart";
 import TableCompent from "../../components/Data/TableComponent";
 import BarChart from "../../components/Data/BarChart";
@@ -130,7 +207,76 @@ export default {
       colorHalf4: "#0088ff",
       colorAll4: "#004aff",
       xName4: "年龄",
-      yName4: "学员"
+      yName4: "学员",
+      xData1: ["周一", "周二", "周三", "周四", "周五", "周六", "周日"],
+      hunheXname1: "数量",
+      hunheYname1: "类型",
+      seriesData1: [
+        {
+          data: [120, 200, 150, 80, 70, 110, 130],
+          type: "bar",
+          itemStyle: {
+            normal: {
+              color:"rgba(1,119,255,1)"
+            }
+          }
+        },
+        {
+          data: [120, 200, 150, 80, 70, 110, 130],
+          type: "line",
+          symbol: "circle",
+          symbolSize: 8,
+          itemStyle: {
+            normal: {
+              color: "#ff9501",
+              lineStyle: {
+                color: "#ff9501",
+                width: 2
+              }
+            }
+          }
+        }
+      ],
+       xData2: ["周一", "周二", "周三", "周四", "周五", "周六", "周日"],
+      hunheXname2: "数量",
+      hunheYname2: "类型",
+      seriesData2: [
+        {
+          data: [120, 200, 150, 80, 70, 110, 130],
+          type: "bar",
+          itemStyle: {
+            normal: {
+              color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                {
+                  offset: 0,
+                  color: "#fd8f00"
+                },
+                { offset: 0.5, color: "#b36500" },
+                {
+                  offset: 1,
+                  color: "#623700"
+                }
+              ]),
+              opacity: 1
+            }
+          }
+        },
+        {
+          data: [120, 200, 150, 80, 70, 110, 130],
+          type: "line",
+          symbol: "circle",
+          symbolSize: 8,
+          itemStyle: {
+            normal: {
+              color: "#008afe",
+              lineStyle: {
+                color: "#008afe",
+                width: 2
+              }
+            }
+          }
+        }
+      ]
     };
   },
   components: { Pie3DChart, TableCompent, BarChart, MapChart, HunheChart },
@@ -177,7 +323,7 @@ export default {
   color: #fff;
   position: absolute;
   top: 50px;
-  left: 200px;
+  left: 50px;
   display: inline-block;
   width: 100px;
   height: 40px;
@@ -241,7 +387,7 @@ export default {
 }
 .chart-title1 {
   display: block;
-  width: 20%;
+  width: 25%;
   height: 28px;
   background: url("../../assets/images/large_title.png") no-repeat;
   background-size: 100% 100%;
@@ -267,5 +413,42 @@ export default {
   width: 90%;
   margin: 15px auto;
   margin-top: 2%;
+}
+.data-number {
+  color: #01a7fe;
+  font-size: 12px;
+  padding: 0;
+}
+.data-number span {
+  font-size: 24px;
+  font-weight: bold;
+  border: 1px solid #094183;
+  margin: 0 0 0 -4px;
+  padding: 0 4px;
+}
+
+.info-type{
+  width:20%;
+  float: left;
+  margin-top:10px;
+}
+.info-img,.info-unit{
+  display:inline-block;
+}
+.info-unit{
+  vertical-align: top;
+}
+.type-name{
+  font-size: 18px;
+
+}
+.type-number{
+  font-size: 18px;
+  color:#ff9600;
+}
+.type-number i{
+  font-style: normal;
+  font-size: 12px;
+
 }
 </style>

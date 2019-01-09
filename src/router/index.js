@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+//大数据平台
 import Data from "../pages/Data/Data"
 //日常办公平台
 import Daily from '../pages/Daily/Daily'
@@ -22,7 +23,9 @@ import PoliceInfo from '../pages/Portrayal/PolicePersonal/PoliceInfo'
 //安防平台
 import AnFang from '../pages/AnFang/AnFang'
 import VideoRecord from '../pages/AnFang/Video/Record'
-
+//戒治综合平台
+import Jiezhi from '../pages/Jiezhi/jiezhi'
+import Bingli from '../pages/Jiezhi/content/bingli'
 Vue.use(Router)
 
 export default new Router({
@@ -31,6 +34,7 @@ export default new Router({
       path: '/',
       redirect: '/daily'
     },
+    //大数据平台
     {
       path: '/data',
       name: 'Data',
@@ -183,5 +187,14 @@ export default new Router({
         }
       ],
     },
+    //戒治综合平台
+    {
+      path: '/zongzhi',
+      component:Jiezhi,
+      meta: {
+        showHeader: true
+      },
+    },
+
   ]
 })

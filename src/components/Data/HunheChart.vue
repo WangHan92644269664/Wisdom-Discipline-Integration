@@ -7,7 +7,20 @@
 <script>
 import echarts from "echarts";
 export default {
-  props: {},
+  props: {
+    xData:{
+      type:Array
+    },
+    hunheXname:{
+      type:String
+    },
+    hunheXname:{
+      type:String
+    },
+    seriesData:{
+      type:Array
+    }
+  },
   data() {
     return {
       count: 1
@@ -27,13 +40,13 @@ export default {
           trigger: "axis"
         },
         xAxis: {
-          data: ["周一", "周二", "周三", "周四", "周五", "周六", "周日"],
+          data: this.xData,
           axisLine: {
             lineStyle: {
               color: "#fff"
             }
           },
-          name: "类型",
+          name: this.hunheYname,
           nameTextStyle: {
             fontSize: 11,
             fontFamily: "Microsoft YaHei",
@@ -48,7 +61,7 @@ export default {
               color: "#fff"
             }
           },
-          name: "数量",
+          name: this.hunheXname,
           nameTextStyle: {
             fontSize: 11,
             fontFamily: "Microsoft YaHei",
@@ -58,35 +71,7 @@ export default {
             show: false
           }
         },
-        series: [
-          {
-            data: [120, 200, 150, 80, 70, 110, 130],
-            type: "bar",
-            itemStyle: {
-              normal: {
-                color: function(params) {
-                  var colorList = ["rgba(1,119,255,1)"];
-                  return colorList[params.dataIndex];
-                }
-              }
-            }
-          },
-          {
-            data: [120, 200, 150, 80, 70, 110, 130],
-            type: "line",
-            symbol: "circle",
-            symbolSize: 8,
-            itemStyle: {
-              normal: {
-                color: "#ff9501",
-                lineStyle: {
-                  color: "#ff9501",
-                  width: 2
-                }
-              }
-            }
-          }
-        ]
+        series: this.seriesData
       });
     }
   },
