@@ -36,7 +36,7 @@ ul {
 }
 .submenu > li {
   text-align: left !important;
-  border-bottom: 1px solid #bbb;
+  border-bottom: 1px solid #040c19;
 }
 .submenu > li:last-child {
   /*text-align: left!important;*/
@@ -47,8 +47,12 @@ ul {
   background: #0f152f;
 }
 .el-aside .el-menu-item-group .el-menu-item {
-  color: #fff !important;
   line-height: 50px !important;
   height: 50px !important;
+}
+.el-aside .el-submenu__title,
+.el-menu-item,
+.el-submenu__title {
+  color: #fff !important;
 }
 </style>
