@@ -1,5 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+//首页
+import Home from '../pages/Home'
 //大数据平台
 import Data from "../pages/Data/Data"
 //日常办公平台
@@ -32,7 +34,7 @@ export default new Router({
   routes: [
     {
       path: '/',
-      redirect: '/daily'
+     component:Home
     },
     //大数据平台
     {
