@@ -32,6 +32,9 @@ import Jiezhi from '../pages/Jiezhi/JieZhi'
 import Bingli from '../pages/Jiezhi/Content/BingLi'
 import GuanXi from '../pages/Jiezhi/Content/GuanXi'
 import QuanXi from '../pages/Jiezhi/Content/QuanXi'
+
+//GIS页面
+import Gis from "../pages/GIS/Gis"
 Vue.use(Router)
 
 export default new Router({
@@ -232,6 +235,14 @@ export default new Router({
         }
       ]
     },
+    //GIS平台
+    {
+      path: '/gis',
+      component:Gis,
+      meta: {
+        showHeader: true
+      },
+    }
 
   ]
 })
