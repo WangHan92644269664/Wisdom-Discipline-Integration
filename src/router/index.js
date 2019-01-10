@@ -45,6 +45,12 @@ export default new Router({
       path: '/',
      component:Start
     },
+    //登录页面
+    {
+      path:'/login',
+      component:Login
+    },
+    //首页
     {
       path:'/home',
       component:Home

@@ -34,7 +34,7 @@
             label: '政策法规',
             children:[
               {
-                label: '政务公开',
+                label: '政策法规',
               }
             ]
           },
@@ -42,7 +42,7 @@
             label: '智慧大厅简介',
             children:[
               {
-                label: '政务公开',
+                label: '智慧大厅简介',
               }
             ]
           },
@@ -50,7 +50,7 @@
             label: '使用说明',
             children:[
               {
-                label: '政务公开',
+                label: '使用说明',
               }
             ]
           },
@@ -58,7 +58,7 @@
             label: '关于我们',
             children:[
               {
-                label: '政务公开',
+                label: '关于我们',
               }
             ]
           },
@@ -66,7 +66,7 @@
             label: '社区简介',
             children:[
               {
-                label: '政务公开',
+                label: '社区简介',
               }
             ]
           },
@@ -74,7 +74,7 @@
             label: '智慧党建',
             children:[
               {
-                label: '政务公开',
+                label: '智慧党建',
               }
             ]
           },
@@ -82,7 +82,7 @@
             label: '居民业务查询',
             children:[
               {
-                label: '政务公开',
+                label: '居民业务查询',
               }
             ]
           },
