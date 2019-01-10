@@ -1,5 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+//启动页
+import Start from '../pages/Start'
 //首页
 import Home from '../pages/Home'
 //登录页面
@@ -41,8 +43,14 @@ export default new Router({
   routes: [
     {
       path: '/',
-     component:Login
+     component:Start
     },
+    //登录页面
+    {
+      path:'/login',
+      component:Login
+    },
+    //首页
     {
       path:'/home',
       component:Home
