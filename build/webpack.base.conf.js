@@ -87,5 +87,8 @@ module.exports = {
       $: "jquery",
       "window.jQquery":"jquery"
     })
-  ]
+  ],
+  externals:{
+    "BMap":"BMap"
+  }
 }

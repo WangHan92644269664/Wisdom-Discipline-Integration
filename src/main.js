@@ -11,6 +11,7 @@ import highcharts3d from 'highcharts/highcharts-3d'
 highcharts3d(highcharts)
 //引入echarts
 import echarts from 'echarts'
+import 'echarts/extension/bmap/bmap';
 Vue.prototype.$echarts = echarts
 //引入particles
 import VueParticles from 'vue-particles'
