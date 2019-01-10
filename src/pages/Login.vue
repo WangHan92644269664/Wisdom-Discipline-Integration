@@ -1,7 +1,7 @@
 <template>
   <el-container id="login">
     <el-main >
-      <el-row style="margin: 180px auto 22px">
+      <el-row style="margin: 130px auto 22px">
         <el-col :span="24" >
           <img :src="titleLogo" alt="">
         </el-col>
@@ -80,8 +80,8 @@
 <style scoped>
 .el-main{
   background: url("./images/login/bg.png");
+  background-size: 100% 100%;
   height: 100vh;
-  background-size:cover!important;
   color:#676565;
   font-size: 17px;
 }

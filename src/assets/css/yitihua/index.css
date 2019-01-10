@@ -1,0 +1,99 @@
+*{
+    margin:0;
+    padding:0;
+
+}
+html,body{
+    width:100%;
+    height: 100%;
+}
+.main{
+    width: 100%;
+    height: 100%;
+    background: url(../../images/yitihua/bg.png) no-repeat;
+    background-size: 100% 100%;
+    overflow: hidden;
+}
+
+.header h1{
+    color:#fff;
+    text-align: center;
+    line-height: 80px;
+}
+
+.line-one{
+    width:60%;
+    height:300px;
+    margin: auto;
+    margin-top:4%;
+    color:#fff;
+}
+.line-two{
+    width:100%;
+ 
+    margin:40px  auto;
+   
+    color:#fff;
+}
+.line-one .lineDiv,.line-two .lineDiv {
+    text-align:center;
+    font-size:36px; 
+    color:#fff;
+    
+}
+.line-one div{
+    width:32%;
+    height: 100%;
+}
+.line-two div{
+    width:25%;
+    height: 30%;
+}
+.lineDiv{
+    float: left;
+}
+.name{
+    display: inline-block;
+    width:200px;
+    height: 200px;
+    background-size: 100% 100%;
+    position: relative;
+}
+.oldBg{
+    width:250px;
+    height: 250px;
+    background: url(../../images/yitihua/before_icon.png) no-repeat;
+    background-size: 100% 100%;
+}
+.newBg{
+    background: url(../../images/yitihua/after_icon.png) no-repeat;
+    width:250px;
+    height:250px;
+    background-size: 100% 100%;
+}
+
+.name img{
+    position:absolute;
+    left:0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+}
+.lineDiv h4{
+    
+}
+.oldColor{
+    font-size: 26px;
+    line-height: 30px;
+    padding:0;
+    color:#2480a7;
+    font-weight: 500;
+}
+.newColor{
+    font-size: 26px;
+    line-height: 30px;
+    padding:0;
+    color:#fff;
+    font-weight: 500;
+}

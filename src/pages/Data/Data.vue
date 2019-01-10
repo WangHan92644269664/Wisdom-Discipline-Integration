@@ -70,8 +70,8 @@
                   <br>
                   <span class="type-number">20 <i>栋</i></span>
                 </div>
-               
-                
+
+
               </div>
               <div class="info-type">
                  <div class="info-img">
@@ -449,6 +449,5 @@ export default {
 .type-number i{
   font-style: normal;
   font-size: 12px;
-
 }
 </style>

@@ -1,0 +1,137 @@
+*{
+    margin:0;
+    padding:0;
+}
+ul,li{
+    list-style: none;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+body{
+    background:url(../images/shouye/shouye.png) no-repeat;
+    background-size: 100% 100%;    
+    min-width: 800px;
+}
+/* 头部 */
+  .header{
+      height: 70px !important;
+      line-height: 70px;
+      background:#011120;
+      color:#fffffd;
+      padding:0 20px;
+  }
+  .headerL{
+    background: url(../images/logo.png) no-repeat 0 14px;
+    padding-left:70px;
+    text-align: left;
+    font-size: 28px;
+  }
+  
+  .main{
+      height:500px;
+      padding:0;
+      width:100%;
+      margin:0;
+      overflow-x: hidden;
+      position: relative;
+      
+  }
+  
+  .headerDiv{
+      height: 70px;
+  }
+/* 内容 */
+  
+#app{
+    width: 100%;
+    height: 100%;
+   
+}
+.main{
+    height:calc(100%-70px);
+    width: 100%;
+    background: none;
+    margin:0;
+}
+.enterLoad{
+    width:70%;
+    height: 70%;
+    margin:auto;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-top:120px;
+}
+.firstLine{
+    width:100%;
+    height: 50%;
+    position: relative;
+    
+}
+.secondLine{
+    width:100%;
+    height: 50%;
+    position: relative;
+}
+
+.AI{
+    
+    background-size: 100% 100%;
+    width:22%;
+    height: 180px;
+    max-width:324px;
+    max-height: 190px;
+    min-height: 150px;
+    min-width: 200px;
+    color:#fff;
+    display:block;
+    float: left;
+    font-size:26px;
+    text-align:center;
+    cursor: pointer;
+    line-height: 190px;
+}
+.wulian{
+    
+    background-size: 100% 100%;
+    width:22%;
+    height: 180px;
+    max-width:324px;
+    max-height: 190px;
+    min-height: 150px;
+    min-width: 200px;
+    color:#fff;
+    display:block;
+    float: right;
+    font-size:26px;
+    text-align:center;
+    cursor: pointer;
+    line-height: 180px;
+}
+.oldBg{
+    width:22%;
+    height: 180px;
+    max-width:324px;
+    max-height: 190px;
+    min-height: 150px;
+    min-width: 200px;
+    
+    background: url(../images/shouye/div_bg.png) no-repeat; 
+    background-size: 100% 100%;
+}
+.changeBg{
+    width:22%;
+    height: 180px;
+    max-width:324px;
+    max-height: 190px;
+    min-height: 150px;
+    min-width: 200px;
+    background:url(../images/shouye/div_bg2.png) no-repeat;
+    background-size: 100% 100%;
+    /* height:190px; */
+}

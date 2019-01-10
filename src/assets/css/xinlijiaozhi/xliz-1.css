@@ -1,0 +1,70 @@
+html,body{
+    height: 100%;
+    height: 100%;
+    overflow: hidden;    
+}
+.demo-input-size{
+    margin-right: 8px;
+}
+.main{
+    overflow: hidden;
+}
+.mainRight{
+    margin:0;
+    padding:0;
+    width:100%;
+    height: 100%;
+    background:url(../../images/xinlijiaozhi/bg.png) no-repeat;
+    background-size: 100% 100%;
+    float:left;
+
+}
+.line-one{
+    height: 65%;
+    width:100%;
+    background:url(../../images/xinlijiaozhi/shujufenxi.png) no-repeat;
+    
+}
+.line-one img{
+    height: 100%;
+    width:100%;
+}
+.line-two{
+    height: 35%;
+}
+.line-two div{
+    width: 20%;
+    float: left;
+    height: 100%;
+    position: relative;
+}
+.line-two div img{
+    width:90%;
+    height: 90%;
+    margin:auto;
+    position: absolute;
+    top:0;
+    right:0;
+    left: 0;
+    bottom:0;
+}
+.backIndex{
+    display: inline-block;
+    /* margin-top:2px; */
+    /* padding:2px; */
+}
+.backIndex a{
+    text-decoration: none;
+    -moz-box-shadow:0 0 10px #06c;
+    -webkit-box-shadow:0 0 10px #06c;
+    box-shadow:0 0 10px #06c;
+    padding:0 10px;
+    line-height: 28px;
+    height: 28px;
+    display: inline-block;
+    color:#9e9fa1;
+    font-size: 14px;
+}
+.backIndex a:hover{
+    color:#9e9fa1;
+}

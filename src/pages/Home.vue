@@ -112,15 +112,14 @@
 
   .el-main {
     background: url("./images/home/bg.png");
-    background-size: cover !important;
-    background-position: center center;
-    height: 100vh;
+    background-size: 100% 100%;
+    height: 94vh;
   }
 
   .bg1 {
     background: url("./images/home/bg1.png") no-repeat;
     background-position: center center;
-    height: 240px;
+    height: 230px;
   }
 
   .bg2 {
@@ -132,24 +131,24 @@
   .bg3 {
     background: url("./images/home/bg3.png") no-repeat;
     background-position: center center;
-    height: 240px;
+    height: 230px;
   }
 
   .bg4 {
     background: url("./images/home/bg4.png") no-repeat;
     background-position: center center;
-    height: 240px;
+    height: 230px;
   }
 
   .bg5 {
     background: url("./images/home/bg5.png") no-repeat;
     background-position: center center;
-    height: 240px;
+    height: 230px;
   }
 
   .bg6 {
     background: url("./images/home/bg6.png") no-repeat;
     background-position: center center;
-    height: 240px;
+    height: 230px;
   }
 </style>
