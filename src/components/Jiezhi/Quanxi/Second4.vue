@@ -1,9 +1,9 @@
 <template>
-  <div>
+  <div id="quanxi">
     <el-table
       :data="tableData"
       border
-      style="width: 100%;height:190px;overflow:auto;"
+      style="width: 100%;height:100%;overflow:auto;"
       :header-cell-style="getRowClass"
       :row-style="tableRowStyle"
     >
@@ -56,6 +56,23 @@ export default {
   }
 };
 </script>
+<style>
+  #quanxi .el-table--border{
+    border:none!important;
+  }
+  #quanxi table{
+    font-size: 16px!important;
+    color:#fff!important;
+  }
+  #quanxi table tr td:nth-of-type(1){
+    color:#0AB9D3!important;
+    font-size: 18px;
+  }
+  #quanxi .el-table--border td,#quanxi .el-table--border td,  #quanxi .el-table--border th{
+    border:1px solid #000!important;
+  }
+
+</style>
 <style scoped>
 .el-table {
   /* background:; */

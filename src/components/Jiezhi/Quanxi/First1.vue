@@ -34,7 +34,7 @@
               type:'funnel',
               left: '10%',
               top: 0,
-              bottom:30,
+              bottom:40,
               width: '80%',
               min: 0,
               max: 100,
@@ -68,14 +68,52 @@
                 }
               },
               data: [
-                {value: 20, name: '人际管理'},
-                {value: 40, name: '人际管理'},
-                {value: 60, name: '行为情况'},
-                {value: 80, name: '生理数据'},
-                {value: 100, name: '心里数据'}
+                {
+                  value: 20,
+                  name: ' ',
+                  itemStyle: {
+                    normal: {
+                      color: '#EFBB19'
+                    }
+                  },
+                },
+                {
+                  value: 40,
+                  name: '人际管理',
+                  itemStyle: {
+                    normal: {
+                      color: '#EFBB19'
+                    }
+                  },},
+                {
+                  value: 60,
+                  name: '行为情况',
+                  itemStyle: {
+                    normal: {
+                      color: '#D77068'
+                    }
+                  },},
+                {
+                  value: 80,
+                  name: '生理数据',
+                  itemStyle: {
+                    normal: {
+                      color: '#C24F60'
+                    }
+                  },
+                },
+                {
+                  value: 140,
+                  name: '心里数据',
+                  itemStyle: {
+                    normal: {
+                      color: '#953F62'
+                    }
+                  },
+                }
               ]
             }
-          ]
+          ],
         });
       }
     },

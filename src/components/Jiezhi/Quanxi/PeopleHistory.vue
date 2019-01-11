@@ -9,8 +9,15 @@
   export default {
     data() {
       return {
-        count: 1
       };
+    },
+    props:{
+      lineColor:{
+        type:String
+      },
+      data:{
+        type:Array
+      }
     },
     methods: {
       drawChart() {
@@ -25,14 +32,33 @@
           tooltip: {
             trigger: "item"
           },
+          legend:{
+            orient: 'horizontal',
+            x: 'right',
+            y: 'top',
+            padding: 20,
+            data: [
+              {
+                name:'次',
+                icon: 'circle',
+                textStyle: {fontWeight: 'bold', color: '#fff'}
+              },
+
+            ],
+          },
             xAxis: {
               type: 'category',
               data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月'],
+              //坐标轴的线条显示或者不显示
               axisLine:{
-                show:true,
-                lineStyle:{
-                  color:"#fff"
-                }
+                show:false,
+              },
+              //坐标轴上的字体颜色
+              axisLabel: {
+                textStyle: {
+                  color: '#fff',
+                  margin:15,
+                },
               },
               axisTick:{
                 show:false
@@ -49,10 +75,13 @@
               },
               //修改线的颜色
               axisLine:{
-                show:true,
-                lineStyle:{
-                  color:"#fff"
-                }
+                show:false,
+              },
+              //坐标轴上的字体颜色
+              axisLabel: {
+                textStyle: {
+                  color: '#999',
+                },
               },
               //去掉刻度线
               axisTick:{
@@ -60,13 +89,14 @@
               }
             },
             series: [{
-              data: [0, 13, 14, 20,11, 9, 2],
+            name:'次',
+              data: this.data,
               type: 'line',
               symbol: 'circle',
               symbolSize:8,
               lineStyle: {
                 normal: {
-                  color: 'white',
+                  color:this.lineColor,
                   width:2,
                   type: 'dashed'
                 }
@@ -88,7 +118,7 @@
         vm.drawChart();
       });
     },
-    created: () => {}
+    created: () => {},
   };
 </script>
 

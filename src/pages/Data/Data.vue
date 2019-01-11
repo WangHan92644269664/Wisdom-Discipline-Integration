@@ -4,7 +4,7 @@
       <div class="header">
         <img src="../../assets/images/title.png" alt>
       </div>
-      <span class="back-index">返回首页</span>
+      <span class="back-index" @click="go">返回首页</span>
       <div class="main-view">
         <el-col class="common-height" :span="6">
           <div class="bili-chart">
@@ -301,7 +301,11 @@ export default {
     }
   },
   created() {},
-  methods: {}
+  methods: {
+    go(){
+      this.$router.push('/home')
+    }
+  }
 };
 </script>
 <style scoped>

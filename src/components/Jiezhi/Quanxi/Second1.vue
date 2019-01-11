@@ -22,39 +22,57 @@
         });
         // 绘制图表
         myChart.setOption({
-            tooltip : {
-              trigger: 'item',
-              formatter: "{a} <br/>{b} : {c} ({d}%)"
-            },
-            legend: {
-              x : 'center',
-          y : 'bottom',
-              data:[]
-            },
-            toolbox: {
-              feature : {
-                magicType : {
+          color: ['#B9DCE0', '#9B8478', '#C0D25C', '#32cd32', '#58C5BF', '#E46D33',],   //饼状图颜色数组
+          tooltip : {
+            trigger: 'item',
+            formatter: "{a} <br/>{b} : {c} ({d}%)"
+          },
+          series : [
+            {
+              name: '访问来源',
+              type: 'pie',
+              radius: ['0%', '55%'],
+              label: {
+                normal: {
+                  formatter: '{b|{b}}\n{hr|}\n{d|{d}%}',
+                  rich: {
+                    //文字的设置
+                    b: {
+                      fontSize: 16,
+                      padding: 4,
+                    },
+                    //线的设置
+                    hr: {
+                      borderColor: '#555',
+                      width: '70%',
+                      borderWidth:1,
+                      height: 0
+                    },
+                    //设置百分比
+                    d: {
+                      fontSize: 10,
+                      align: 'left',
+                      padding: 4
+                    },
+                  }
+                }
+              },
+              labelLine: {
+                normal: {
                   show: true,
-                  type: ['pie']
-                },
-              }
-            },
-            series : [
-              {
-                name:'面积模式',
-                type:'pie',
-                radius : [0,80],
-                center : ['50%', '50%'],
-                roseType : 'area',
-                data:[
-                  {value:40, name:'心里戒毒'},
-                  {value:12, name:'娱乐活动'},
-                  {value:30, name:'生理戒毒'},
-                  {value:23, name:'义务劳动'},
-                  {value:5, name:'用餐'},
-                ]
-              }
-            ]
+                  length: 10,
+                  length2: 30,
+                }
+              },
+              data:[
+                {value:600, name:'心里戒毒'},
+                {value:220, name:'娱乐活动'},
+                {value:500, name:'生理戒毒'},
+                {value:310, name:'义务劳动'},
+                {value:135, name:'用餐'},
+              ],
+            }
+          ]
         });
       }
     },
