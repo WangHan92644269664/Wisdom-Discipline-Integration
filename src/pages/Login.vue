@@ -152,5 +152,8 @@
     letter-spacing: 1em;
     font-weight: 600;
   }
-
+.el-button:focus, .el-button:hover{
+  background-color: transparent !important;
+  color:#fff !important;
+}
 </style>

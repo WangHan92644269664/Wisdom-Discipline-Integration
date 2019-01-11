@@ -6,10 +6,10 @@
         <div class="head-info">
           <img
             style="display:block;margin:0 auto;"
-            src="../../../assets/images/jiezhi/ceshiicon.png"
+            src="../../../assets/images/jiezhi/bingli/ceshiicon.png"
             alt
           >
-          <span class="people-name">张某某</span>
+          <span class="people-name">张勇</span>
         </div>
         <p>年龄:26岁</p>
         <p>人员来源:自愿入所戒毒</p>
@@ -84,7 +84,7 @@
     </el-col>
     <el-col class="common-height" :span="7">
       <div class="huizhen">
-        <h4>护理记录</h4>
+        <h4>会诊记录</h4>
         <TabHuiZ/>
       </div>
       <div class="yibiao-chart">
@@ -214,15 +214,23 @@ export default {
   line-height: 22px;
 }
 .head-info {
-  width: 130px;
+  /* width: 130px;
   height: 95px;
-  background: url("../../../assets/images/jiezhi/head_bg.png") no-repeat;
   background-size: 100% 100%;
-  margin: 3% auto;
-  padding-top: 20px;
+  margin: 3% auto;*/
+  padding-top: 4%; 
+}
+.head-info img{
+  width:36%;
+  margin-top:3%;
 }
 .people-name {
   color: #333;
+  display: inline-block;
+ background: #009cff;
+ font-size: 14px;
+ padding:2px 6px;
+ margin-top:1%;
 }
 .personal-info h4,
 .shengli-info h4 {

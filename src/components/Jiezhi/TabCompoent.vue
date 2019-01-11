@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="record-hl">
     <el-table
       :data="tableData"
       border
@@ -72,6 +72,49 @@ export default {
   }
 };
 </script>
+<style>
+#record-hl .el-table--border td, #record-hl .el-table--border th {
+  border:1px solid #000 !important;
+}
+#record-hl .el-table--border,
+.el-table--group {
+  border: none;
+}
+#record-hl .el-table{
+  color:#fff;
+}
+#record-hl .el-table thead {
+  color: #fdd600;
+}
+#record-hl .el-table th,
+.el-table tr {
+  background: #1e2357;
+}
+#record-hl .el-table td,
+.el-table th.is-leaf {
+  border-bottom: 1px solid #040c19;
+}
+#record-hl .el-table--border td,
+.el-table--border th,
+.el-table__body-wrapper .el-table--border.is-scrolling-left ~ .el-table__fixed {
+  border-right: 1px solid #040c19;
+}
+#record-hl .el-table--border,
+.el-table--group {
+  border: none;
+}
+#record-hl .el-table--border::after,
+.el-table--group::after,
+.el-table::before {
+  background: #1e2357;
+}
+#record-hl .el-table--enable-row-hover .el-table__body tr:hover > td {
+  background-color: #212e3e !important;
+}
+#record-hl table tr td:nth-of-type(1),#record-hl table tr td:nth-of-type(2){
+  color:#0AB9D3;
+}
+</style>
 <style scoped>
 .el-table {
   /* background:; */
