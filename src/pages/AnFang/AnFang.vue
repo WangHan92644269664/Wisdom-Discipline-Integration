@@ -1,5 +1,5 @@
 <template>
-  <el-container>
+  <el-container style="height: 93vh">
     <!--主体内容的侧边栏-->
     <el-aside width="200px">
       <!--左侧侧边栏组件-->
