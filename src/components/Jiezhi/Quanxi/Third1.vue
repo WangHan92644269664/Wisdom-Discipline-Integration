@@ -23,7 +23,9 @@
         // 绘制图表
         myChart.setOption({
           backgroundColor: "transparent",
+          color:['red','#750E39'],
           legend: {
+            show:true,
             data: ['上周', '本周'],
             orient: 'horizontal',
             x: 'right',
@@ -33,7 +35,7 @@
                   fontSize:14,
                   color:'#fff'
                 },
-                icon:'stack'
+                icon:'roundRect'
           },
           grid: {
             top: '8%',

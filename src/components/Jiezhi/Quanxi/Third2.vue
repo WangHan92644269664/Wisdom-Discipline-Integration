@@ -23,6 +23,7 @@
         // 绘制图表
         myChart.setOption({
           backgroundColor: "transparent",
+          color:['#066083'],
           tooltip: {
           },
           legend: {
@@ -37,7 +38,7 @@
                   fontSize:14,
                   color:'#fff'
                 },
-                icon:'stack'
+                icon:'roundRect'
               },
               ]
 
