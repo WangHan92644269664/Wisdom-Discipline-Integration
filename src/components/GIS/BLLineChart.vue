@@ -37,7 +37,7 @@ export default {
       // 绘制图表
       myChart.setOption({
         title: {
-          text: '所选大队预警趋势',
+          text: "所选大队预警趋势",
           textStyle: {
             color: "#feffff",
             fontSize: "16"

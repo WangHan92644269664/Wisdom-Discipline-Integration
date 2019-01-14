@@ -120,7 +120,7 @@
       <div class="right-div3">
         <h4>历史抓拍人像</h4>
         <el-col :span="12" v-for="(item,index) in Data3" :key="index">
-          <div class="contact-img">
+          <div class="contact-img contact-img3">
             <img :src="item.imgUrl" alt>
             <br>
             <span>{{item.name}}</span>
@@ -271,6 +271,7 @@ export default {
   width: calc(100% - 206px);
   margin: 0 auto;
   margin-left: 1%;
+  position: relative;
 }
 .info-left h4,
 .info-right h4,
@@ -295,6 +296,9 @@ export default {
   color: #fbd502;
 }
 .main-info {
+  position: absolute;
+  /* top:50%;
+  left:50%; */
   text-align: left;
   padding: 3% 2%;
 }
@@ -441,6 +445,113 @@ export default {
     left: 56%;
     transform: translate(-50%, -50%);
   }
+  .father-info {
+    position: absolute;
+    top: 15%;
+    left: 6%;
+    font-size: 12px;
+  }
+  .mother-info {
+    position: absolute;
+    top: 25%;
+    left: 41%;
+    font-size: 12px;
+  }
+  .sibling-info {
+    position: absolute;
+    top: 75%;
+    left: 6%;
+    font-size: 12px;
+  }
+  .sister-info {
+    position: absolute;
+    top: 75%;
+    left: 40%;
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  *{
+    font-size: 18px;
+  }
+  .main-info{
+    width:100%;
+  }
+  .main-info img {
+    /* display: block;
+    height: 70%; */
+    width:25%;
+  }
+  .p-con{
+    display:inline-block;
+    width:50%;
+    height: 100%;
+  }
+  .p-con p {
+    font-size: 18px;
+    padding:2% 0;
+  }
+  .center {
+    position: absolute;
+    top: 55%;
+    left: 56%;
+    transform: translate(-50%, -50%);
+  }
+  .father-info {
+    position: absolute;
+    top: 15%;
+    left: 6%;
+    font-size: 12px;
+  }
+  .mother-info {
+    position: absolute;
+    top: 25%;
+    left: 41%;
+    font-size: 12px;
+  }
+  .sibling-info {
+    position: absolute;
+    top: 75%;
+    left: 6%;
+    font-size: 12px;
+  }
+  .sister-info {
+    position: absolute;
+    top: 75%;
+    left: 40%;
+    font-size: 12px;
+  }
+  .contact-img img{
+    width:80%;
+    margin-top:30%;
+  }
+  .contact-img span{
+    font-size: 18px;
+  }
+  .contact-info img{
+    width:60%;
+  }
+  .contact-info{
+    font-size:18px;
+  }
+  .center {
+    width:20%;
+    height: 20%;
+    position: absolute;
+    top: 50%;
+    left: 54%;
+    transform: translate(-50%, -50%);
+  }
+  .center  img{
+    height: 100%;
+  }
+  .contact-img3 img{
+    margin-top:15%;
+  }
+  .info-right{
+    width:calc(100% - 220px)
+  }
+
 }
 </style>
 

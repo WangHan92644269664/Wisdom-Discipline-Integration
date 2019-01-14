@@ -114,6 +114,9 @@ export default {
 #record-hl table tr td:nth-of-type(1),#record-hl table tr td:nth-of-type(2){
   color:#0AB9D3;
 }
+#record-hl .el-table, .el-table__expanded-cell{
+  background-color: transparent !important;
+}
 </style>
 <style scoped>
 .el-table {

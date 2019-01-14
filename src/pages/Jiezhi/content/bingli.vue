@@ -218,19 +218,19 @@ export default {
   height: 95px;
   background-size: 100% 100%;
   margin: 3% auto;*/
-  padding-top: 4%; 
+  padding-top: 4%;
 }
-.head-info img{
-  width:36%;
-  margin-top:3%;
+.head-info img {
+  width: 36%;
+  margin-top: 3%;
 }
 .people-name {
   color: #333;
   display: inline-block;
- background: #009cff;
- font-size: 14px;
- padding:2px 6px;
- margin-top:1%;
+  background: #009cff;
+  font-size: 14px;
+  padding: 2px 6px;
+  margin-top: 1%;
 }
 .personal-info h4,
 .shengli-info h4 {
@@ -353,10 +353,26 @@ export default {
 .fx-info {
   height: 30%;
 }
-.fx-info-p{
-    text-align: left;
-    padding:0 20px;
-    font-size: 14px;
+.fx-info-p {
+  text-align: left;
+  padding: 0 20px;
+  font-size: 14px;
+}
+@media screen and (min-width: 1921px) {
+  * {
+    font-size: 18px;
+  }
+  .head-info img {
+    width: 50%;
+    height: 40%;
+  }
+  .bingli-head p {
+    font-size: 18px;
+    height: 10%;
+  }
+  .people-name {
+    font-size: 18px;
+  }
 }
 </style>
 

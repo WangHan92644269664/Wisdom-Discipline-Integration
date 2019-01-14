@@ -61,7 +61,7 @@
         </div>
         <div class="data-info">
           <h4>值班人员信息</h4>
-          <ul>
+          <ul >
             <li class="first-li">
               <span class="li-left">巡逻人员</span>
               <span class="li-middle">工作时间</span>
@@ -225,10 +225,12 @@ li {
 .data-info ul {
   margin: 0;
   padding: 0;
+  height: 100%;
+  overflow: auto;
 }
 .data-info ul li {
   width: 100%;
-  padding: 2% 0;
+  padding: 1% 0;
 }
 .data-info li span {
   display: inline-block;

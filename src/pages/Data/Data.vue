@@ -382,7 +382,7 @@ export default {
 }
 .chart-title {
   display: block;
-  width: 40%;
+  width: 44%;
   height: 28px;
   background: url("../../assets/images/comm_title.png") no-repeat;
   background-size: 100% 100%;
