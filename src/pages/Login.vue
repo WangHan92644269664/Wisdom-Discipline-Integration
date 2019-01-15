@@ -6,46 +6,48 @@
           <img :src="titleLogo" alt="" width="8%">
         </el-col>
       </el-row>
-      <el-row class="two">
-        <el-col :span="24" style="margin: 0 auto 0">
-          <img :src="titleImg" alt="">
-        </el-col>
-      </el-row>
-      <el-row class="third">
-        <el-col :span="24" class="box">
+
+        <el-row class="two">
+          <el-col :span="24" style="margin: 0 auto 0">
+            <img :src="titleImg" alt="">
+          </el-col>
+        </el-row>
+        <el-row class="third">
+          <el-col :span="24" class="box">
             <el-row>
               <el-col :span="24" class="boxTitle">
-                  欢迎登录
+                欢迎登录
               </el-col>
             </el-row>
-          <el-row>
-            <el-col :span="8" class="userBox" :offset="8">
-              <el-form :model="ruleForm2"  ref="ruleForm2" >
-                <el-form-item  prop="pass">
-                  <img :src="user" alt="" >
-                  <el-input  v-model="ruleForm2.user"  placeholder="请输入管理员的姓名..." ></el-input>
-                </el-form-item>
-                <el-form-item  prop="age" style="margin-left: 40px;">
-                  <img :src="pwdLeft" alt="" >
-                  <el-input type="password" v-model="ruleForm2.pwd" placeholder="******" ></el-input>
-                  <img :src="pwdRight" alt="" style="margin-right: 20px;">
-                </el-form-item>
-                <el-form-item class="open">
-                  <el-row style="margin-top: 28px;">
-                    <el-col :span="5" class="open1">
-                      <span>ABC &nbsp;&nbsp;</span><img :src="openBottom" alt=""> <img :src="openTop" alt="" >
-                    </el-col>
-                    <el-col :span="5" class="open2"> <a>忘记密码?</a></el-col>
-                  </el-row>
-                </el-form-item>
-                <el-form-item>
-                  <el-button  @click="submitForm('ruleForm')" class="login">登 录</el-button>
-                </el-form-item>
-              </el-form>
-            </el-col>
-          </el-row>
-        </el-col>
-      </el-row>
+            <el-row>
+              <el-col :span="8" class="userBox" :offset="8">
+                <el-form :model="ruleForm2"  ref="ruleForm2" >
+                  <el-form-item  prop="pass">
+                    <img :src="user" alt="" >
+                    <el-input  v-model="ruleForm2.user"  placeholder="请输入管理员的姓名..." ></el-input>
+                  </el-form-item>
+                  <el-form-item  prop="age" style="margin-left: 40px;">
+                    <img :src="pwdLeft" alt="" >
+                    <el-input type="password" v-model="ruleForm2.pwd" placeholder="******" ></el-input>
+                    <img :src="pwdRight" alt="" style="margin-right: 20px;">
+                  </el-form-item>
+                  <el-form-item class="open">
+                    <el-row style="margin-top: 28px;">
+                      <el-col :span="5" class="open1">
+                        <span>ABC &nbsp;&nbsp;</span><img :src="openBottom" alt=""> <img :src="openTop" alt="" >
+                      </el-col>
+                      <el-col :span="5" class="open2"> <a>忘记密码?</a></el-col>
+                    </el-row>
+                  </el-form-item>
+                  <el-form-item>
+                    <el-button  @click="submitForm('ruleForm')" class="login">登 录</el-button>
+                  </el-form-item>
+                </el-form>
+              </el-col>
+            </el-row>
+          </el-col>
+        </el-row>
+
     </el-main>
   </el-container>
 </template>
@@ -84,6 +86,7 @@
   height: 100vh;
   color:#676565;
   font-size: 17px;
+  margin: 0 !important;
 }
   .box{
     background: url("./images/login/loginBg.png") no-repeat;
