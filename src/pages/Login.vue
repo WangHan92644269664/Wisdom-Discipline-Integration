@@ -1,7 +1,7 @@
 <template>
   <el-container id="login">
     <el-main >
-      <el-row style="margin: 10% auto 22px" class="title">
+      <el-row style="margin: 7% auto 22px" class="title">
         <el-col :span="24" >
           <img :src="titleLogo" alt="" width="8%">
         </el-col>

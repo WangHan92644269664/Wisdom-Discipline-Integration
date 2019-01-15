@@ -7,8 +7,8 @@
       :header-cell-style="getRowClass"
       :row-style="tableRowStyle"
     >
-      <el-table-column prop="date" label="日期" width="100px"></el-table-column>
-      <el-table-column prop="info" label="信息记录" width="442px"></el-table-column>
+      <el-table-column prop="date" label="日期" min-width="30%"></el-table-column>
+      <el-table-column prop="info" label="信息记录" min-width="60%"></el-table-column>
     </el-table>
   </div>
 </template>
@@ -71,11 +71,25 @@ export default {
   #quanxi .el-table--border td,#quanxi .el-table--border td,  #quanxi .el-table--border th{
     border:1px solid #000!important;
   }
+  @media screen and (min-width: 1921px) {
+    .el-table{
+      background-color: transparent!important;
+      border:1px solid transparent!important;
+    }
+    #quanxi table{
+      font-size: 18px!important;}
+    #quanxi table tr td:nth-of-type(1){
+      font-size: 20px;
+    }
+  }
+  .el-table::before{
+    height: 0!important;
 
+  }
+  .el-table--border::after, .el-table--group::after{
+    background:none!important;
+  }
 </style>
 <style scoped>
-.el-table {
-  /* background:; */
-}
 </style>
 

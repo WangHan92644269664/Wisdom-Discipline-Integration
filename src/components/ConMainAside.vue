@@ -1,5 +1,5 @@
 <template>
-    <div class="mainLeft" style="height:760px;width:250px">
+    <div class="mainLeft" style="height:100%;width:250px">
       <el-row class="borderBottom">
         <el-col :span="21">{{name}}</el-col>
         <el-col :span="2" style="color:#FF6400;"><img :src="add" alt=""></el-col>

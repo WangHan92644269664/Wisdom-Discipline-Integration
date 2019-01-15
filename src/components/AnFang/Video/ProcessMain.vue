@@ -35,28 +35,28 @@
       <el-table-column
         prop="name"
         label="姓名"
-        width="100">
+        min-width="10%">
       </el-table-column>
       <el-table-column
         prop="sex"
         label="性别"
-        width="100">
+        min-width="10%">
       </el-table-column>
       <el-table-column
         prop="nation"
         label="民族"
-        width="100"
+        min-width="10%"
       >
       </el-table-column>
       <el-table-column
         prop="date"
         label="出生日期"
-        width="150">
+        min-width="15%">
       </el-table-column>
       <el-table-column
         prop="photo"
         label="缩略图"
-        width="160">
+        min-width="16%">
         <template slot-scope="scope">
           <img :src="scope.row.photo" alt="" style="width: 50px;height: 30px;">
         </template>
@@ -64,17 +64,17 @@
       <el-table-column
         prop="phone"
         label="联系电话"
-        width="180">
+        min-width="18%">
       </el-table-column>
       <el-table-column
         prop="dept"
         label="所属单位"
-        width="210">
+        min-width="20%">
       </el-table-column>
       <el-table-column
         prop="work"
         label="所属职务"
-        width="120">
+        min-width="12%">
       </el-table-column>
       <el-table-column
         prop="people"

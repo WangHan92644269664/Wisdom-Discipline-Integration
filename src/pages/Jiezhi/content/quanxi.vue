@@ -23,7 +23,7 @@
           <el-col :span="3" :offset="1">
             <img src="../../../assets/images/jiezhi/quanxi/header.png">
           </el-col>
-          <el-col :span="15" :offset="5">
+          <el-col :span="14" :offset="6">
             <p>姓名:张某华</p>
             <p>年龄:26岁</p>
             <p>人员来源: 自愿入所戒毒</p>
@@ -108,7 +108,14 @@
   }
 </script>
 <style scoped>
-
+  @media screen and (min-width: 1921px) {
+    * {
+      font-size: 18px!important;
+    }
+    .el-table{
+      background-color: transparent!important;
+  }
+  }
 
   .wrapper {
     height: 100%;
@@ -205,12 +212,12 @@
 
   .peopleInfo  p {
     height:5%;
-    margin: 1px;
+    margin-bottom: 5%!important;
   }
 
   .peopleInfo  p:first-child {
-    margin: 0;
-    height: 10%;
+    /*margin: 0;*/
+    /*height: 10%;*/
   }
   .infoBox p {
     text-align: left;
@@ -236,12 +243,27 @@
     top: 5%;
     -webkit-transition:font-size 0.2s ease-out;
   }
-  @media only screen and (max-width: 2560px) {.second2 > span:first-child{ font-size: 130px; }}
+  @media only screen and (min-width: 2560px) {
+    .second2 > span:first-child{ font-size: 130px!important; }
+    .first2 img{
+      width: 75%!important;
+    }
+  }
+  @media only screen and (max-width: 1920px) {
+    .first2 img{
+      width: 65%!important;
+    }
+  }
   @media only screen and (max-width: 1820px) {.second2 > span:first-child{ font-size: 85px; }}
   @media only screen and (max-width: 1720px) {.second2 > span:first-child{ font-size: 75px; }}
   @media only screen and (max-width: 1650px) { .second2 > span:first-child{ font-size: 70px; }}
   @media only screen and (max-width: 1420px) { .second2 > span:first-child{ font-size: 65px; }}
-  @media only screen and (max-width: 1366px) { .second2 > span:first-child{ font-size: 50px; }}
+  @media only screen and (max-width: 1366px) {
+    .second2 > span:first-child{ font-size: 50px; }
+    .first2 img{
+      width: 60%!important;
+    }
+  }
 
   .second2 > span:nth-child(2) {
     position: relative;

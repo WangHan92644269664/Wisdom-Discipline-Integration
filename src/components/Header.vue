@@ -126,6 +126,14 @@
   .el-menu-item[data-v-61dd7a3d]{
     padding: 0 30px;
   }
+@media screen and (max-width: 1366px){
+  .el-col-lg-3{
+    width: 14.5%!important;
+  }
+  .el-col-lg-16{
+    width: 64.6%!important;
+  }
+}
   @media screen and (max-width: 1720px){
     .el-menu-item[data-v-61dd7a3d]{
       padding: 0 28px!important;

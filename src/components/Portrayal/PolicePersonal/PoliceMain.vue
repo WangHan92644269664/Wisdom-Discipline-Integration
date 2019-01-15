@@ -30,33 +30,33 @@
     >
       <el-table-column
         type="selection"
-        width="55">
+        min-width="5%">
       </el-table-column>
       <el-table-column
         prop="name"
         label="姓名"
-        width="100">
+        min-width="10%">
       </el-table-column>
       <el-table-column
         prop="sex"
         label="性别"
-        width="100">
+        min-width="10%">
       </el-table-column>
       <el-table-column
         prop="nation"
         label="民族"
-        width="100"
+        min-width="10%"
       >
       </el-table-column>
       <el-table-column
         prop="date"
         label="出生日期"
-        width="150">
+        min-width="12%">
       </el-table-column>
       <el-table-column
         prop="photo"
         label="照片"
-        width="160">
+        min-width="12%">
         <template slot-scope="scope">
           <img :src="scope.row.photo" alt="" style="width: 50px;height: 30px;">
         </template>
@@ -64,27 +64,27 @@
       <el-table-column
         prop="phone"
         label="联系电话"
-        width="180">
+        min-width="12%">
       </el-table-column>
       <el-table-column
         prop="dept"
         label="所属单位"
-        width="210">
+        min-width="14%">
       </el-table-column>
       <el-table-column
         prop="work"
         label="所属职务"
-        width="120">
+        min-width="10%">
       </el-table-column>
       <el-table-column
         prop="people"
         label="录入人"
-        width="150">
+        min-width="10%">
       </el-table-column>
       <el-table-column
         fixed="right"
         label="操作"
-        width="300">
+        min-width="20%">
         <template slot-scope="scope">
           <el-button @click="handleClick(scope.row)"size="small" >查看</el-button>
           <el-button @click="handleClick(scope.row)" size="small">编辑</el-button>

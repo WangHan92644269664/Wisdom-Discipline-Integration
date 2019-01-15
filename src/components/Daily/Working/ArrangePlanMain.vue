@@ -55,30 +55,30 @@
     >
       <el-table-column
         type="selection"
-        width="55">
+        min-width="5%">
       </el-table-column>
       <el-table-column
         fixed
         prop="id"
         sortable
         label="编号"
-        width="120">
+        min-width="7%">
       </el-table-column>
       <el-table-column
         prop="name"
         label="计划标题"
-        width="200">
+        min-width="12%">
       </el-table-column>
       <el-table-column
         prop="people"
         sortable
         label="审核人"
-        width="200">
+        min-width="11%">
       </el-table-column>
         <el-table-column
           prop="tag"
           label="完成程度"
-          width="150"
+          min-width="11%"
           column-key="tag"
           :filters="[{text:'未审核',value:'未审核'},{text:'正在进行',value:'正在进行'},{text:'还未开始',value:'还未开始'}]"
           align="center"
@@ -93,7 +93,7 @@
         prop="before"
         label="开始时间"
         column-key="tag"
-        width="300">
+        min-width="14%">
         <template slot-scope="scope">
           <span :class="{red:scope.row.tag==='还未开始'}">
             {{scope.row.before}}
@@ -104,7 +104,7 @@
         prop="end"
         label="完成时间"
         column-key="tag"
-        width="300">
+        min-width="14%">
         <template slot-scope="scope">
           <span :class="{red:scope.row.tag==='还未开始',blue:scope.row.tag==='正在进行'}">
             {{scope.row.end}}
@@ -115,7 +115,7 @@
         fixed="right"
         label="操作"
         column-key="tag"
-        width="300">
+        min-width="20%">
         <template slot-scope="scope">
           <template v-if="scope.row.tag==='未审核'">
             <el-button @click="selectRow(scope.row)"size="small" class="selectUndo">查看</el-button>

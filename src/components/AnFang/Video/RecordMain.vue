@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="anfang">
     <el-row class="mainRight">
       <el-col :span="24" class="borderBottom">
        会见探访记录列表
@@ -30,38 +30,38 @@
     >
       <el-table-column
         type="selection"
-        width="55">
+        min-width="5%">
       </el-table-column>
       <el-table-column
         prop="name"
         label="姓名"
-        width="200">
+        min-width="10%">
       </el-table-column>
       <el-table-column
         prop="time"
         label="探访时间"
-        width="250">
+        min-width="15%">
       </el-table-column>
       <el-table-column
         prop="people"
         label="探访人姓名"
-        width="250"
+        min-width="15%"
       >
       </el-table-column>
       <el-table-column
         prop="relation"
         label="关系"
-        width="200">
+        min-width="15%">
       </el-table-column>
       <el-table-column
         prop="endTime"
         label="探访结束时间"
-        width="300">
+        min-width="20%">
       </el-table-column>
       <el-table-column
         fixed="right"
         label="操作"
-        width="300">
+        min-width="20%">
         <template slot-scope="scope">
           <el-button @click="handleClick(scope.row)"size="small" >查看</el-button>
           <el-button @click="handleClick(scope.row)" size="small">编辑</el-button>

@@ -5,7 +5,7 @@
       <!--左侧侧边栏组件-->
      <Aside></Aside>
     </el-aside>
-    <el-container style="margin:35px">
+    <el-container>
       <!--子路由显示的地方-->
       <router-view/>
     </el-container>
@@ -18,7 +18,7 @@
   export default {
     data() {
       return {
-        // screenHeight: document.documentElement.clientHeight //屏幕高度
+        screenHeight: document.documentElement.clientHeight //屏幕高度
       }
     },
     components: {
@@ -52,5 +52,8 @@
 }
   .el-container{
     height: 100%;
+  }
+  .el-container>.el-main{
+    margin: 35px!important;
   }
 </style>

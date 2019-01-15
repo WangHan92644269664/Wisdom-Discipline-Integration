@@ -25,6 +25,10 @@
     box-shadow:1px 1px 20px rgba(76,76,76,.2);
     border:none;
     padding: 0 !important;
+    margin: 35px 35px 0 35px!important;
+  }
+  .home {
+    margin: 0!important;
   }
   .el-table thead{
     color:#6e6e6e;
@@ -112,7 +116,6 @@
     padding: 0;
   }
   .el-aside{
-     height: 870px;
      background:#fff;
    }
   .el-aside .el-submenu__title,.el-aside. el-menu-item, .el-submenu__title{
@@ -169,4 +172,5 @@
     background-position: center center!important;
     background-size: 100% 100%!important;
   }
+
 </style>

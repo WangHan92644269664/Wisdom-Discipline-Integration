@@ -7,7 +7,7 @@
         </el-col>
       </el-row>
     </el-header>
-    <el-main>
+    <el-main class="home">
       <el-row class="wrapper first">
         <el-col :span="8" >
           <div class="bg1 bg"  @click="change('/anfang')">
