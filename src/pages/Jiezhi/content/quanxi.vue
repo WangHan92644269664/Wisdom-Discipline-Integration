@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper">
+  <div class="wrapper quanxi">
     <el-row>
       <el-col :span="5">
         <h4 class="title">人员全息档案</h4>
@@ -108,10 +108,7 @@
   }
 </script>
 <style scoped>
-  .main-right div[data-v-706553db] {
-    background-image: url("../../../assets/images/jiezhi/quanxi/bg.png") !important;
-    background-position: center center;
-  }
+
 
   .wrapper {
     height: 100%;
@@ -239,6 +236,7 @@
     top: 5%;
     -webkit-transition:font-size 0.2s ease-out;
   }
+  @media only screen and (max-width: 2560px) {.second2 > span:first-child{ font-size: 130px; }}
   @media only screen and (max-width: 1820px) {.second2 > span:first-child{ font-size: 85px; }}
   @media only screen and (max-width: 1720px) {.second2 > span:first-child{ font-size: 75px; }}
   @media only screen and (max-width: 1650px) { .second2 > span:first-child{ font-size: 70px; }}

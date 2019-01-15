@@ -212,9 +212,6 @@ export default new Router({
     {
       path: '/zongzhi',
       component:Jiezhi,
-      meta: {
-        showHeader: true
-      },
       children: [
         {
           path: '/zongzhi/bingli',

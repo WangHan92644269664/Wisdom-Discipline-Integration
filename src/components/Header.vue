@@ -7,20 +7,13 @@
         </el-col>
         <el-col :xl="14" :lg="16"  style="text-align: center;margin:0 auto;" id="two">
           <el-menu
-            :default-active="activeIndex"
-            class="el-menu-demo"
+            :default-active="active"
             mode="horizontal"
             @select="handleSelect"
             background-color="#181818"
             text-color="#fff"
             active-text-color="#007eff" router>
-            <el-menu-item index="/home" class="left">首页</el-menu-item>
-            <el-menu-item index="/anfang">安防平台</el-menu-item>
-            <el-menu-item index="/portrayal">人员面像平台</el-menu-item>
-            <el-menu-item index="/zongzhi">戒治综合平台</el-menu-item>
-            <el-menu-item index="/data">大数据平台</el-menu-item>
-            <el-menu-item index="/gis">GIS平台</el-menu-item>
-            <el-menu-item index="/daily">日常办公平台</el-menu-item>
+         <el-menu-item v-for="route in routes" :key="route.path" :index="route.path" :class="$route.path===route.path?'is-active':''">{{route.name}}</el-menu-item>
           </el-menu>
         </el-col>
         <el-col :xl="3" :lg="3" id="three" style="padding-right: 35px;">
@@ -42,20 +35,60 @@
 </template>
 
 <script>
+  import Bus from '../assets/js/bus'
   export default {
     name: "Header",
     data() {
       return {
-        activeIndex: '/working',
         header:require('./images/header1.jpg'),
-        left:require('./images/logo.png')
+        left:require('./images/logo.png'),
+        active:'',
+        routes:[
+          {
+            path:'/home',
+            name:'首页'
+          },
+          {
+            path:'/anfang',
+            name:'安防平台'
+          },
+          {
+            path:'/portrayal',
+            name:'人员面像平台'
+          },
+          {
+            path:'/data',
+            name:'大数据平台'
+          },
+          {
+            path:'/zongzhi',
+            name:'戒治综合平台'
+          },
+          {
+            path:'/gis',
+            name:'GIS平台'
+          },
+          {
+            path:'/daily',
+            name:'日常办公平台'
+          },
+        ]
       };
     },
     methods: {
       handleSelect(key, keyPath) {
-        console.log(key, keyPath);
+        // console.log(key, keyPath);
       },
     },
+    mounted(){
+      //解决页面刷新的时候路由不高亮显示的问题
+      this.active=this.$route.matched[0].path;
+      //解决首页点击进入每个页面的时候都是默认高亮首页的问题
+      let self =this;
+      Bus.$on('activeIndex',(defaultActive)=>{
+        self.active=defaultActive;
+      })
+    }
   }
 </script>
 

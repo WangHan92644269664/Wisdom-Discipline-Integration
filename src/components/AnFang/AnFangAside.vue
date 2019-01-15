@@ -1,5 +1,5 @@
 <template>
-  <el-menu  class="submenu"   :default-active="activeIndex" unique-opened router>
+  <el-menu  class="submenu"   :default-active="activeIndex" unique-opened router >
     <el-menu-item index="#" class="leftTitle">安防平台</el-menu-item>
     <el-submenu index="/anFang/video">
       <template slot="title">视频探视系统</template>

@@ -163,4 +163,10 @@
   #login input::-webkit-input-placeholder{
     color: #676565!important;
   }
+
+  .quanxi{
+    background-image: url("./assets/images/jiezhi/quanxi/bg.png")!important;
+    background-position: center center!important;
+    background-size: 100% 100%!important;
+  }
 </style>

@@ -1,17 +1,17 @@
 <template>
   <el-container id="login">
     <el-main >
-      <el-row style="margin: 130px auto 22px">
+      <el-row style="margin: 10% auto 22px" class="title">
         <el-col :span="24" >
-          <img :src="titleLogo" alt="">
+          <img :src="titleLogo" alt="" width="8%">
         </el-col>
       </el-row>
-      <el-row>
+      <el-row class="two">
         <el-col :span="24" style="margin: 0 auto 0">
           <img :src="titleImg" alt="">
         </el-col>
       </el-row>
-      <el-row>
+      <el-row class="third">
         <el-col :span="24" class="box">
             <el-row>
               <el-col :span="24" class="boxTitle">
@@ -32,10 +32,10 @@
                 </el-form-item>
                 <el-form-item class="open">
                   <el-row style="margin-top: 28px;">
-                    <el-col :span="8" :offset="5">
-                      <span>ABC &nbsp;&nbsp;</span><img :src="openBottom" alt=""> <img :src="openTop" alt="">
+                    <el-col :span="5" class="open1">
+                      <span>ABC &nbsp;&nbsp;</span><img :src="openBottom" alt=""> <img :src="openTop" alt="" >
                     </el-col>
-                    <el-col :span="5" :offset="2"> <a>忘记密码?</a></el-col>
+                    <el-col :span="5" class="open2"> <a>忘记密码?</a></el-col>
                   </el-row>
                 </el-form-item>
                 <el-form-item>
@@ -114,8 +114,15 @@
   font-size: 17px!important;
 }
   .open{
-    text-align: left;
+    text-align: center;
     font-weight: bolder;
+  }
+  .open1{
+    width: 40%;
+    text-align: right;
+  }
+  .open2{
+    width: 40%;
   }
   .open span{
     position: relative;
@@ -155,5 +162,23 @@
 .el-button:focus, .el-button:hover{
   background-color: transparent !important;
   color:#fff !important;
+}
+@media only screen and (min-width: 2560px)
+{
+  #login .el-main .title{margin-top: 14%!important; }
+  #login .open1{
+    width: 42%!important;
+    text-align: right;
+  }
+  #login .open2{
+    width:33%!important;
+    text-align:center;
+  }
+}
+@media only screen and (max-width: 1366px)
+{
+  #login .el-main .title{margin-top: 5%!important; }
+  #login .el-main .title img{
+    width: 8%!important;}
 }
 </style>

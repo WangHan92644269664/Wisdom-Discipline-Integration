@@ -1,11 +1,11 @@
 <template>
-  <el-container style="height: 93vh">
+  <el-container>
     <!--主体内容的侧边栏-->
     <el-aside width="200px">
       <!--左侧侧边栏组件-->
      <Aside></Aside>
     </el-aside>
-    <el-container style="margin:35px;height: 790px;">
+    <el-container style="margin:35px;">
       <!--子路由显示的地方-->
       <router-view/>
     </el-container>
