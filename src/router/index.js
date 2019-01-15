@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 //启动页
-import Start from '../pages/Start'
+import Start from '../pages/Start1'
 //首页
 import Home from '../pages/Home'
 //登录页面

@@ -1,94 +1,37 @@
 <template>
-  <div  id="start">
     <div>
-      <div class="login" >
-        <img  src="../assets/images/开场动画_灰.gif" alt="">
-        <p>智慧戒管一体化平台</p>
+      <div class="container">
+        <div id="particles"></div>
       </div>
-      <el-row>
-        <el-col :span="8" :offset="16" style="float: right">
+      <div class="enter">
+        <div class="logo">
+          <h1>智慧戒管一体化平台</h1>
           <router-link to="/login">点击登录>></router-link>
-        </el-col>
-      </el-row>
-      <vue-particles
-        color="#00FEFE"
-        :particleOpacity="0.8"
-        :particlesNumber="40"
-        shapeType="circle"
-        :particleSize="4"
-        linesColor="#ccc"
-        :linesWidth="1"
-        :lineLinked="true"
-        :lineOpacity="0.4"
-        :linesDistance="150"
-        :moveSpeed="3"
-        :hoverEffect="true"
-        hoverMode="grab"
-        :clickEffect="true"
-        clickMode="push"
-      >
-      </vue-particles>
+        </div>
+      </div>
     </div>
-  </div>
-
 </template>
 
 <script>
-  export default {
-    name: "Start",
-    data() {
-      return {
-        screenHeight: document.documentElement.clientHeight //屏幕高度
-      };
-    },
-  }
+  import particles from 'particles.js'
+    export default {
+        name: "Start1",
+      mounted(){
+          particlesJS.load('particles','../../static/particles.json')
+      }
+    }
 </script>
-<style>
-  #particles-js>canvas{
-    height: 100vh!important;
-  }
-  #start{
-    background: #000!important;
-  }
 
-  @media only screen and (max-width: 1366px)
-  {
-    #start{
-      height:1000px!important;
-    }
-  }
-  @media only screen and (max-width:1920px)
-  {
-    #start{
-      height:1080px!important;
-    }
-  }
-</style>
 <style scoped>
-.login{
+  @import "../assets/css/index/index.css";
+#particles{
   position: absolute;
-  top:30%;
-  left:35%;
-}
-  .login p{
-    color:#f8f8f8;
-    font-size:31px;
-    position: relative;
-    top: -350px;
-  }
- a{
-    font-size:18px;
-    background-size: 100% 100%;
-    padding: 15px 30px;
-    text-decoration: none;
-    color:#00caff;
-    border:1px solid rgb(0,149,255);
-    border-radius: 7px;
-    box-shadow: 2px 2px 10px #333 inset;
-    font-weight: bolder;
-   position: fixed;
-   bottom:70px;
-   right: 60px;
-  }
+  height: 100%;
+  width: 100%;
+  background-color: #000;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
 
+}
 </style>
