@@ -95,27 +95,31 @@
     <el-col class="common-height" :span="9">
       <div class="right-div1">
         <h4>同寝人员关系状态</h4>
-        <el-col :span="6" v-for="(item,index) in peopleData1" :key="index">
-          <div class="contact-img">
-            <img :src="item.imgUrl" alt>
-            <br>
-            <span>{{item.name}}</span>
-            <br>
-            <span class style="color:#f1a504">{{item.status}}</span>
-          </div>
-        </el-col>
+        <div class="right-first">
+          <el-col :span="6" v-for="(item,index) in peopleData1" :key="index">
+            <div class="contact-img">
+              <img :src="item.imgUrl" alt>
+              <br>
+              <span>{{item.name}}</span>
+              <br>
+              <span class style="color:#f1a504">{{item.status}}</span>
+            </div>
+          </el-col>
+        </div>
       </div>
       <div class="right-div2">
-        <h4>同寝人员关系状态</h4>
-        <el-col :span="6" v-for="(item,index) in Data2" :key="index">
-          <div class="contact-img">
-            <img :src="item.imgUrl" alt>
-            <br>
-            <span>{{item.name}}</span>
-            <br>
-            <span class style="color:#f1a504">{{item.status}}</span>
-          </div>
-        </el-col>
+        <h4>房间各类系统状态</h4>
+        <div class="right-second">
+          <el-col :span="6" v-for="(item,index) in Data2" :key="index">
+            <div class="contact-img">
+              <img :src="item.imgUrl" alt>
+              <br>
+              <span>{{item.name}}</span>
+              <br>
+              <span class style="color:#f1a504">{{item.status}}</span>
+            </div>
+          </el-col>
+        </div>
       </div>
       <div class="right-div3">
         <h4>历史抓拍人像</h4>
@@ -405,6 +409,7 @@ export default {
   margin-top: 1%;
   width: 98%;
   border-radius: 5px;
+  position: relative;
 }
 .right-div2 {
   height: 31%;
@@ -412,6 +417,7 @@ export default {
   margin-top: 1%;
   width: 98%;
   border-radius: 5px;
+  position: relative;
 }
 .right-div3 {
   height: 34%;
@@ -427,6 +433,22 @@ export default {
   position: absolute;
   top: 52%;
   left: 53%;
+  transform: translate(-50%, -50%);
+}
+.right-first {
+  width: 100%;
+  height: 60%;
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  transform: translate(-50%, -50%);
+}
+.right-second {
+  width: 100%;
+  height: 60%;
+  position: absolute;
+  left: 50%;
+  top: 20%;
   transform: translate(-50%, -50%);
 }
 @media screen and (max-width: 1366px) {
@@ -471,25 +493,25 @@ export default {
   }
 }
 @media screen and (min-width: 1920px) {
-  *{
-    font-size: 18px;
+  * {
+    font-size: 16px;
   }
-  .main-info{
-    width:100%;
+  .main-info {
+    width: 100%;
   }
   .main-info img {
     /* display: block;
     height: 70%; */
-    width:25%;
+    width: 25%;
   }
-  .p-con{
-    display:inline-block;
-    width:50%;
+  .p-con {
+    display: inline-block;
+    width: 50%;
     height: 100%;
   }
   .p-con p {
-    font-size: 18px;
-    padding:2% 0;
+    font-size: 16px;
+    padding: 2% 0;
   }
   .center {
     position: absolute;
@@ -521,37 +543,150 @@ export default {
     left: 40%;
     font-size: 12px;
   }
-  .contact-img img{
-    width:80%;
-    margin-top:30%;
+  .contact-img img {
+    width: 70%;
+    margin-top: 10%;
   }
-  .contact-img span{
+  .contact-img span {
+    font-size: 16px;
+  }
+  .contact-info img {
+    width: 60%;
+  }
+  .contact-info {
     font-size: 18px;
   }
-  .contact-info img{
-    width:60%;
-  }
-  .contact-info{
-    font-size:18px;
-  }
   .center {
-    width:20%;
+    width: 20%;
     height: 20%;
     position: absolute;
     top: 50%;
     left: 54%;
     transform: translate(-50%, -50%);
   }
-  .center  img{
+  .center img {
     height: 100%;
   }
-  .contact-img3 img{
-    margin-top:15%;
+  .contact-img3 img {
+    margin-top: 8%;
   }
-  .info-right{
-    width:calc(100% - 220px)
+  .info-right {
+    width: calc(100% - 220px);
   }
-
+  .right-first {
+    width: 100%;
+    height: 60%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .right-second {
+    width: 100%;
+    height: 60%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+@media screen and (min-width: 2461px) {
+  * {
+    font-size: 18px;
+  }
+  .main-info {
+    width: 100%;
+  }
+  .main-info img {
+    /* display: block;
+    height: 70%; */
+    width: 25%;
+  }
+  .p-con {
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+  }
+  .p-con p {
+    font-size: 16px;
+    padding: 2% 0;
+  }
+  .center {
+    position: absolute;
+    top: 55%;
+    left: 54%;
+    transform: translate(-50%, -50%);
+  }
+  .father-info {
+    position: absolute;
+    top: 15%;
+    left: 6%;
+    font-size: 12px;
+  }
+  .mother-info {
+    position: absolute;
+    top: 25%;
+    left: 41%;
+    font-size: 12px;
+  }
+  .sibling-info {
+    position: absolute;
+    top: 75%;
+    left: 6%;
+    font-size: 12px;
+  }
+  .sister-info {
+    position: absolute;
+    top: 75%;
+    left: 40%;
+    font-size: 12px;
+  }
+  .contact-img img {
+    width: 70%;
+    margin-top: 30%;
+  }
+  .contact-img span {
+    font-size: 16px;
+  }
+  .contact-info img {
+    width: 60%;
+  }
+  .contact-info {
+    font-size: 18px;
+  }
+  .center {
+    width: 20%;
+    height: 20%;
+    position: absolute;
+    top: 50%;
+    left: 52%;
+    transform: translate(-50%, -50%);
+  }
+  .center img {
+    height: 100%;
+  }
+  .contact-img3 img {
+    margin-top: 15%;
+  }
+  .info-right {
+    width: calc(100% - 220px);
+  }
+  .right-first {
+    width: 100%;
+    height: 60%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .right-second {
+    width: 100%;
+    height: 60%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 </style>
 
