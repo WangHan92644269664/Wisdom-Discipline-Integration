@@ -1,7 +1,7 @@
 <template>
   <el-container>
     <ConMainAside :name="name" :data="data" ></ConMainAside>
-    <el-main>
+    <el-main style="height: 98%;">
         <!--主体内容的右边的内容组件-->
         <MainRight :rightTitle="rightTitle"></MainRight>
     </el-main>

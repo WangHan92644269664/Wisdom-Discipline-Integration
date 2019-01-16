@@ -114,7 +114,7 @@
         fixed="right"
         label="操作"
         column-key="tag"
-        min-width="20%">
+        min-width="27%">
         <template slot-scope="scope">
           <template v-if="scope.row.tag==='未审核'">
             <el-button @click="selectRow(scope.row)"size="small" class="selectUndo">查看</el-button>

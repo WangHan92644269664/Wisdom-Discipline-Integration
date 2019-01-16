@@ -1,5 +1,5 @@
 <template>
-    <div class="mainLeft" style="height:100%;width:250px">
+    <div class="mainLeft" style="height:96.5%;width:250px">
       <el-row class="borderBottom">
         <el-col :span="21">{{name}}</el-col>
         <el-col :span="2" style="color:#FF6400;"><img :src="add" alt=""></el-col>
@@ -35,7 +35,7 @@
 <style scoped>
   .mainLeft {
     background: #fff;
-    margin-right: 30px;
+    margin: 30px 0 30px 30px;
     box-shadow: 2px 2px 20px rgba(76,76,76,0.2);
     padding: 15px 0 !important;
   }

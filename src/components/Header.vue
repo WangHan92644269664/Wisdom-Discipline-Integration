@@ -126,7 +126,7 @@
   .el-menu-item[data-v-61dd7a3d]{
     padding: 0 30px;
   }
-@media screen and (max-width: 1366px){
+@media screen and (max-width: 1600px){
   .el-col-lg-3{
     width: 14.5%!important;
   }
