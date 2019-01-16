@@ -21,7 +21,7 @@ export default {
       // 基于准备好的dom，初始化echarts实例
       var myChart = echarts.init(this.$refs.echarts);
       $(window).resize(function() {
-        myChart.resize(); //窗口变化
+        
       });
       // 绘制图表
       let pointsData = baiduJSON; //其实这一步是多余的
