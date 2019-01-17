@@ -1,5 +1,5 @@
 <template>
-  <el-menu class="submenu" :default-active="activeIndex" unique-opened router>
+  <el-menu class="submenu" :default-active="active" unique-opened router>
     <el-menu-item index="#" class="leftTitle">戒治综合平台</el-menu-item>
     <el-menu-item index="/zongzhi/bingli">人员电子病历</el-menu-item>
     <el-menu-item index="/zongzhi/guanxi">人员社会关系</el-menu-item>
@@ -12,8 +12,12 @@ export default {
   name: "ContainerAside",
   data() {
     return {
-      activeIndex: "/zongzhi/bingli"
+      active: "/zongzhi/bingli"
     };
+  },
+  mounted(){
+    //解决页面刷新的时候路由不高亮显示的问题
+    this.active=this.$route.matched[1].path;
   }
 };
 </script>
