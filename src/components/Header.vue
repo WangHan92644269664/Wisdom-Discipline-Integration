@@ -126,14 +126,18 @@
   .el-menu-item[data-v-61dd7a3d]{
     padding: 0 30px;
   }
-@media screen and (max-width: 1366px){
+@media screen and (max-width: 1600px){
   .el-col-lg-3{
-    width: 14.5%!important;
+    width: 13.3%!important;
   }
   .el-col-lg-16{
     width: 64.6%!important;
   }
+  .el-col-13{
+    width: 58%!important;
+  }
 }
+
   @media screen and (max-width: 1720px){
     .el-menu-item[data-v-61dd7a3d]{
       padding: 0 28px!important;
@@ -144,14 +148,18 @@
       padding: 0 25px!important;
     }
   }
-  @media screen and (max-width: 1400px){
+  @media screen and (max-width: 1600px){
     .el-menu-item[data-v-61dd7a3d]{
       padding: 0 23px!important;
+    }
+    .el-col-lg-5{
+      width: 22%!important;
     }
   }
   @media screen and (max-width: 1366px){
     .el-menu-item[data-v-61dd7a3d]{
       padding: 0 20px!important;
     }
+
   }
 </style>
