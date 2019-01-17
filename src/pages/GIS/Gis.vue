@@ -2,7 +2,7 @@
   <div id="content" ref="homePage">
     <div class="main">
       <el-col class="common-height left-div" :span="4">
-        <h4 class="left-title">监所区域信息</h4>
+        <h4 class="left-title">监所区域信息11</h4>
         <p>
           <span class="p-left">人员总数</span>
           <span class="p-right">2341</span>
