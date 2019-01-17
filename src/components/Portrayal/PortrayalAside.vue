@@ -27,7 +27,7 @@
         name: "ContainerAside",
       data(){
           return {
-            activeIndex:'/personal/health/HIS/patient'
+            activeIndex:'/personal/health/HIS/patient',
           }
       }
     }

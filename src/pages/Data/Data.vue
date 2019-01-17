@@ -28,92 +28,95 @@
         </el-col>
         <el-col class="common-height" :span="12">
           <div class="data-info">
-            <div class="info-top">
-              <el-col :span="8">
-                <h5>现有学员总数</h5>
-                <div class="data-number">
-                  <span>2</span>
-                  <span>6</span>
-                  <span>5</span>
-                  <span>3</span>
-                  人
-                </div>
-              </el-col>
-              <el-col :span="8">
-                <h5>全年日均人数</h5>
-                <div class="data-number">
-                  <span>2</span>
-                  <span>6</span>
-                  <span>5</span>
-                  <span>3</span>
-                  人
-                </div>
-              </el-col>
-              <el-col :span="8">
-                <h5>累计戒治人数</h5>
-                <div class="data-number">
-                  <span>2</span>
-                  <span>6</span>
-                  <span>5</span>
-                  <span>3</span>
-                  人
-                </div>
-              </el-col>
-            </div>
-            <div class="info-bottom">
-              <div class="info-type">
-                <div class="info-img">
-                   <img src="../../assets/images/icon1.png" alt="">
-                </div>
-                <div class="info-unit">
-                  <span class="type-name">建筑物</span>
-                  <br>
-                  <span class="type-number">20 <i>栋</i></span>
-                </div>
+            <div class="auto-data">
+              <div class="info-top">
+                <el-col :span="8">
+                  <h5>现有学员总数</h5>
+                  <div class="data-number">
+                    <span>2</span>
+                    <span>6</span>
+                    <span>5</span>
+                    <span>3</span>
+                    人
+                  </div>
+                </el-col>
+                <el-col :span="8">
+                  <h5>全年日均人数</h5>
+                  <div class="data-number">
+                    <span>2</span>
+                    <span>6</span>
+                    <span>5</span>
+                    <span>3</span>
+                    人
+                  </div>
+                </el-col>
+                <el-col :span="8">
+                  <h5>累计戒治人数</h5>
+                  <div class="data-number">
+                    <span>2</span>
+                    <span>6</span>
+                    <span>5</span>
+                    <span>3</span>
+                    人
+                  </div>
+                </el-col>
+              </div>
+              <div class="info-bottom">
+                <div class="info-type">
+                  <div class="info-img">
+                    <img src="../../assets/images/icon1.png" alt="">
+                  </div>
+                  <div class="info-unit">
+                    <span class="type-name">建筑物</span>
+                    <br>
+                    <span class="type-number">20 <i>栋</i></span>
+                  </div>
 
 
-              </div>
-              <div class="info-type">
-                 <div class="info-img">
-                   <img src="../../assets/images/icon2.png" alt="">
                 </div>
-                <div class="info-unit">
-                  <span class="type-name">部件</span>
-                  <br>
-                  <span class="type-number">10 <i>件</i></span>
+                <div class="info-type">
+                  <div class="info-img">
+                    <img src="../../assets/images/icon2.png" alt="">
+                  </div>
+                  <div class="info-unit">
+                    <span class="type-name">部件</span>
+                    <br>
+                    <span class="type-number">10 <i>件</i></span>
+                  </div>
                 </div>
-              </div>
-              <div class="info-type">
-                 <div class="info-img">
-                   <img src="../../assets/images/icon3.png" alt="">
+                <div class="info-type">
+                  <div class="info-img">
+                    <img src="../../assets/images/icon3.png" alt="">
+                  </div>
+                  <div class="info-unit">
+                    <span class="type-name">走访</span>
+                    <br>
+                    <span class="type-number">10 <i>件</i></span>
+                  </div>
                 </div>
-                <div class="info-unit">
-                  <span class="type-name">走访</span>
-                  <br>
-                  <span class="type-number">10 <i>件</i></span>
+                <div class="info-type">
+                  <div class="info-img">
+                    <img src="../../assets/images/icon4.png" alt="">
+                  </div>
+                  <div class="info-unit">
+                    <span class="type-name">事件</span>
+                    <br>
+                    <span class="type-number">14 <i>件</i></span>
+                  </div>
                 </div>
-              </div>
-              <div class="info-type">
-                 <div class="info-img">
-                   <img src="../../assets/images/icon4.png" alt="">
-                </div>
-                <div class="info-unit">
-                  <span class="type-name">事件</span>
-                  <br>
-                  <span class="type-number">14 <i>件</i></span>
-                </div>
-              </div>
-              <div class="info-type">
-                 <div class="info-img">
-                   <img src="../../assets/images/icon1.png" alt="">
-                </div>
-                <div class="info-unit">
-                  <span class="type-name">组织</span>
-                  <br>
-                  <span class="type-number">12 <i>个</i></span>
+                <div class="info-type">
+                  <div class="info-img">
+                    <img src="../../assets/images/icon1.png" alt="">
+                  </div>
+                  <div class="info-unit">
+                    <span class="type-name">组织</span>
+                    <br>
+                    <span class="type-number">12 <i>个</i></span>
+                  </div>
                 </div>
               </div>
             </div>
+
           </div>
           <div class="map-chart">
             <MapChart/>
@@ -453,5 +456,22 @@ export default {
 .type-number i{
   font-style: normal;
   font-size: 12px;
+}
+@media screen and (min-width: 1921px)
+{
+  .header {
+    padding-top:2%;
+  }
+  .data-info{
+    position:relative;
+  }
+  .auto-data{
+    width:100%;
+    height: 50%;
+    position:absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
 }
 </style>
