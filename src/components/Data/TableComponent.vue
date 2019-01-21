@@ -140,5 +140,16 @@ li span {
 ::-webkit-scrollbar-corner {
   background: transparent;
 }
-
+@media screen and (min-height: 588px)
+{
+  .report-con{
+    max-height:170px !important;
+  }
+}
+@media screen and (min-height: 768px)
+{
+  .report-con{
+    max-height:200px !important;
+  }
+}
 </style>

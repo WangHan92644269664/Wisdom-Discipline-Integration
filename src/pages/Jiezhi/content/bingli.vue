@@ -77,7 +77,7 @@
       </div>
       <div class="ai-bottom">
         <div class="fangan">
-          <div class="fangan-button">戒毒方案</div>
+          <div class="fangan-button">戒毒<br>方案</div>
         </div>
         <img src="../../../assets/images/jiezhi/3D_peopel.gif" alt>
       </div>
@@ -374,6 +374,63 @@ export default {
     font-size: 18px;
   }
 }
+@media screen and (min-height: 588px) {
+  .head-info img{
+    width:25%;
+  }
+  .people-name{
+    padding:0 4px;
+    font-size: 12px;
+    
+  }
+  .bingli-head p{
+    line-height: 14px;
+  }
+  .personal-info h4{
+    padding:0;
+    margin:0;
+  }
+  .shengli-info h4{
+    padding:0;
+    margin:0;
+  }
+  .fangan{
+    width:70px;
+    height: 70px;
+  }
+  .fangan-button{
+    font-size: 12px;
+    width:40px;
+    height: 40px;
+  }
+  .right-second{
+    top:50%;
+  }
+  .right-first{
+    top:50%;
+  }
+}
+@media screen and (min-height: 768px) {
+  .head-info img{
+    width:35%;
+  }
+  .people-name{
+    padding:3px 4px;
+    font-size: 16px;
+    
+  }
+  .bingli-head p{
+    line-height:22px;
+  }
+  .personal-info h4{
+    /* padding:0; */
+    padding:3%;
+  }
+  .shengli-info h4{
+    padding:3%;
+  }
+}
+
 </style>
 
 

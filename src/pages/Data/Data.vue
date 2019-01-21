@@ -34,9 +34,9 @@
                   <h5>现有学员总数</h5>
                   <div class="data-number">
                     <span>2</span>
-                    <span>6</span>
-                    <span>5</span>
-                    <span>3</span>
+                    <span>4</span>
+                    <span>2</span>
+                    <span>1</span>
                     人
                   </div>
                 </el-col>
@@ -44,16 +44,16 @@
                   <h5>全年日均人数</h5>
                   <div class="data-number">
                     <span>2</span>
-                    <span>6</span>
                     <span>5</span>
-                    <span>3</span>
+                    <span>1</span>
+                    <span>1</span>
                     人
                   </div>
                 </el-col>
                 <el-col :span="8">
                   <h5>累计戒治人数</h5>
                   <div class="data-number">
-                    <span>2</span>
+                    <span>1</span>
                     <span>6</span>
                     <span>5</span>
                     <span>3</span>
@@ -474,4 +474,12 @@ export default {
     transform: translate(-50%,-50%);
   }
 }
+@media screen and (min-height: 588px)
+{
+  .data-info h5{
+    margin:0;
+    padding:0;
+  }
+}
+
 </style>
