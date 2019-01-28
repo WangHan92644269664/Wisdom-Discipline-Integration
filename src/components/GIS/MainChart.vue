@@ -66,6 +66,9 @@ export default {
       let option;
       myChart.setOption(
         (option = {
+          // visualMap: {
+          //   show: false
+          // },
           bmap: {
             center: [116.46, 39.92],
             zoom: 10,
@@ -258,4 +261,10 @@ export default {
   /* background: url("../../assets/images/data/bili_bg.png") no-repeat; */
   background-size: 100% 100%;
 }
+ .anchorBL{
+  display: none !important;
+}
+ .BMap_cpyCtrl, .BMap_noprint, .anchorBL{
+   display: none !important;
+ }
 </style>

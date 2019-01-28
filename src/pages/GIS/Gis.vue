@@ -61,7 +61,7 @@
         </div>
         <div class="data-info">
           <h4>值班人员信息</h4>
-          <ul >
+          <ul>
             <li class="first-li">
               <span class="li-left">巡逻人员</span>
               <span class="li-middle">工作时间</span>
@@ -96,7 +96,7 @@
           <BLLineChart :xData="xData1" :seriesData="seriesData1"/>
         </div>
         <div class="select-area">
-            <BLBarL/>
+          <BLBarL/>
         </div>
       </el-col>
     </div>
@@ -111,7 +111,7 @@ import BLLineChart from "../../components/GIS/BLLineChart";
 import BLBarL from "../../components/GIS/BLBarLongitudinal";
 
 export default {
-  components: { MainChart, LiquidChart, PercentChart, BLLineChart,BLBarL },
+  components: { MainChart, LiquidChart, PercentChart, BLLineChart, BLBarL },
   data() {
     return {
       screenHeight: document.documentElement.clientHeight, //屏幕高度
@@ -254,11 +254,11 @@ li {
 .qushi div {
   height: 100%;
 }
-.select-area{
-    height: 18%;
+.select-area {
+  height: 18%;
 }
-.select-area div{
-    height: 100%;
+.select-area div {
+  height: 100%;
 }
 </style>
 
