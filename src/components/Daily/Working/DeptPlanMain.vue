@@ -49,8 +49,8 @@
             <el-input v-model="formInline.name" placeholder="请输入"></el-input>
           </el-form-item>
           <el-form-item class="search">
-            <el-button type="primary" size="small"><img :src="search" alt="" style="margin-right: 8px;">查询</el-button>
-            <el-button type="primary" size="small"><img :src="reset" alt="" style="margin-right: 8px;">重置</el-button>
+            <el-button type="primary" size="small"><img :src="search" alt="" class="sel">查询</el-button>
+            <el-button type="primary" size="small"><img :src="reset" alt="" class="res">重置</el-button>
             <el-button type="primary" size="small"><img :src="add" alt="" class="add">添加</el-button>
           </el-form-item>
         </el-form>

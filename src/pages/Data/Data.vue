@@ -481,5 +481,11 @@ export default {
     padding:0;
   }
 }
+@media screen and (min-height: 1080px)
+{
+  .data-info h5{
+    margin-top:30px;
+  }
+}
 
 </style>

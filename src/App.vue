@@ -16,6 +16,14 @@
 </script>
 
 <style>
+  .el-button--small{
+    font-size: 14px!important;
+  }
+
+  .sel,.add,.res{
+    margin-right: 8px;
+    vertical-align: middle;
+  }
   #app {
     text-align: center;
     background: #e7e7e7;

@@ -45,49 +45,58 @@ export default {
     //设置表格第一行的颜色
     getRowClass({ row, column, rowIndex, columnIndex }) {
       if (rowIndex === 0) {
-        return "color:#ffd800;background:#141738;border:border:1px solid #000";
+        return "color:#ffd800;background:#1f2359;border:border:1px solid #040c18";
       } else {
-        return "color:#ffd800;background:#141738;border:border:1px solid #000";
+        return "color:#ffd800;background:#1f2359;border:border:1px solid #040c18";
       }
     },
     tableRowStyle({ row, rowIndex }) {
-      return "background-color: #141738";
+      return "background-color:#1f2359";
     }
   }
 };
 </script>
 <style>
-  #quanxi .el-table--border{
-    border:none!important;
+  #quanxi .el-table--border td, #record-hz .el-table--border th {
+    border:1px solid #000 !important;
   }
-  #quanxi table{
-    font-size: 16px!important;
-    color:#fff!important;
+  #quanxi  .el-table--border,
+  .el-table--group {
+    border: none;
   }
-  #quanxi table tr td:nth-of-type(1){
-    color:#0AB9D3!important;
-    font-size: 18px;
+  #quanxi  .el-table {
+    color: #fff;
   }
-  #quanxi .el-table--border td,#quanxi .el-table--border td,  #quanxi .el-table--border th{
-    border:1px solid #000!important;
+  #quanxi  .el-table thead {
+    color: #fdd600;
   }
-  @media screen and (min-width: 1921px) {
-    .el-table{
-      background-color: transparent!important;
-      border:1px solid transparent!important;
-    }
-    #quanxi table{
-      font-size: 18px!important;}
-    #quanxi table tr td:nth-of-type(1){
-      font-size: 20px;
-    }
+  #quanxi  .el-table th,
+  .el-table tr {
+    background: #1e2357;
   }
-  .el-table::before{
-    height: 0!important;
-
+  #quanxi  .el-table td,
+  .el-table th.is-leaf {
+    border-bottom: 1px solid #040c19;
   }
-  .el-table--border::after, .el-table--group::after{
-    background:none!important;
+  #quanxi  .el-table--border td,
+  .el-table--border th,
+  .el-table__body-wrapper .el-table--border.is-scrolling-left ~ .el-table__fixed {
+    border-right: 1px solid #040c19;
+  }
+  #quanxi  .el-table--border,
+  .el-table--group {
+    border: none;
+  }
+  #quanxi  .el-table--border::after,
+  .el-table--group::after,
+  .el-table::before {
+    background: #1e2357;
+  }
+  #quanxi  .el-table--enable-row-hover .el-table__body tr:hover > td {
+    background-color: #212e3e !important;
+  }
+  #quanxi  table tr td:nth-of-type(1){
+    color: #0ab9d3;
   }
 </style>
 <style scoped>
