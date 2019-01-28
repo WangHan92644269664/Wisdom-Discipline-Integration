@@ -32,12 +32,20 @@
               <div class="info-top">
                 <el-col :span="8">
                   <h5>现有学员总数</h5>
-                  <div class="data-number">
+                  <!-- <div class="data-number">
                     <span>2</span>
                     <span>4</span>
                     <span>2</span>
                     <span>1</span>
                     人
+                  </div>-->
+                  <div class="number-grow-warp">
+                    <span
+                      ref="numberGrow"
+                      :data-time="time"
+                      class="number-grow"
+                      :data-value="value"
+                    >0</span>
                   </div>
                 </el-col>
                 <el-col :span="8">
@@ -64,59 +72,71 @@
               <div class="info-bottom">
                 <div class="info-type">
                   <div class="info-img">
-                    <img src="../../assets/images/icon1.png" alt="">
+                    <img src="../../assets/images/icon1.png" alt>
                   </div>
                   <div class="info-unit">
                     <span class="type-name">建筑物</span>
                     <br>
-                    <span class="type-number">20 <i>栋</i></span>
+                    <span class="type-number">
+                      20
+                      <i>栋</i>
+                    </span>
                   </div>
-
-
                 </div>
                 <div class="info-type">
                   <div class="info-img">
-                    <img src="../../assets/images/icon2.png" alt="">
+                    <img src="../../assets/images/icon2.png" alt>
                   </div>
                   <div class="info-unit">
                     <span class="type-name">部件</span>
                     <br>
-                    <span class="type-number">10 <i>件</i></span>
+                    <span class="type-number">
+                      10
+                      <i>件</i>
+                    </span>
                   </div>
                 </div>
                 <div class="info-type">
                   <div class="info-img">
-                    <img src="../../assets/images/icon3.png" alt="">
+                    <img src="../../assets/images/icon3.png" alt>
                   </div>
                   <div class="info-unit">
                     <span class="type-name">走访</span>
                     <br>
-                    <span class="type-number">10 <i>件</i></span>
+                    <span class="type-number">
+                      10
+                      <i>件</i>
+                    </span>
                   </div>
                 </div>
                 <div class="info-type">
                   <div class="info-img">
-                    <img src="../../assets/images/icon4.png" alt="">
+                    <img src="../../assets/images/icon4.png" alt>
                   </div>
                   <div class="info-unit">
                     <span class="type-name">事件</span>
                     <br>
-                    <span class="type-number">14 <i>件</i></span>
+                    <span class="type-number">
+                      14
+                      <i>件</i>
+                    </span>
                   </div>
                 </div>
                 <div class="info-type">
                   <div class="info-img">
-                    <img src="../../assets/images/icon1.png" alt="">
+                    <img src="../../assets/images/icon1.png" alt>
                   </div>
                   <div class="info-unit">
                     <span class="type-name">组织</span>
                     <br>
-                    <span class="type-number">12 <i>个</i></span>
+                    <span class="type-number">
+                      12
+                      <i>个</i>
+                    </span>
                   </div>
                 </div>
               </div>
             </div>
-
           </div>
           <div class="map-chart">
             <MapChart/>
@@ -172,6 +192,7 @@
 </template>
 <script>
 import echarts from "echarts";
+// import "../../assets/js/data/countNumber";
 import Pie3DChart from "../../components/Data/Pie3Dchart";
 import TableCompent from "../../components/Data/TableComponent";
 import BarChart from "../../components/Data/BarChart";
@@ -179,6 +200,17 @@ import MapChart from "../../components/Data/MapChart";
 import HunheChart from "../../components/Data/HunheChart";
 export default {
   name: "Data",
+  props: {
+    time: {
+      type: Number,
+      default: 2
+    },
+    value: {
+      type: Number,
+      default: 720000
+    }
+  },
+
   data() {
     return {
       screenHeight: document.documentElement.clientHeight, //屏幕高度
@@ -220,7 +252,7 @@ export default {
           type: "bar",
           itemStyle: {
             normal: {
-              color:"rgba(1,119,255,1)"
+              color: "rgba(1,119,255,1)"
             }
           }
         },
@@ -240,7 +272,7 @@ export default {
           }
         }
       ],
-       xData2: ["周一", "周二", "周三", "周四", "周五", "周六", "周日"],
+      xData2: ["周一", "周二", "周三", "周四", "周五", "周六", "周日"],
       hunheXname2: "数量",
       hunheYname2: "类型",
       seriesData2: [
@@ -295,6 +327,9 @@ export default {
     // //echart操作
     const vm = this;
     vm.$nextTick(() => {});
+
+    // 数字滚动;
+    this.numberGrow(this.$refs.numberGrow);
   },
   watch: {
     screenHeight: function(val) {
@@ -305,8 +340,29 @@ export default {
   },
   created() {},
   methods: {
-    go(){
-      this.$router.push('/home')
+    go() {
+      this.$router.push("/home");
+    },
+    numberGrow(ele) {
+      let _this = this;
+      let step = (_this.value * 10) / (_this.time * 1000);
+      let current = 0;
+      let start = 0;
+      let t = setInterval(function() {
+        start += step;
+        if (start > _this.value) {
+          clearInterval(t);
+          start = _this.value;
+          t = null;
+        }
+        if (current === start) {
+          return;
+        }
+        current = start;
+        ele.innerHTML = current
+          .toString()
+          .replace(/(\d)(?=(?:\d{3}[+]?)+$)/g, "$1,");
+      }, 10);
     }
   }
 };
@@ -434,52 +490,156 @@ export default {
   padding: 0 4px;
 }
 
-.info-type{
-  width:20%;
+.info-type {
+  width: 20%;
   float: left;
-  margin-top:10px;
+  margin-top: 10px;
 }
-.info-img,.info-unit{
-  display:inline-block;
+.info-img,
+.info-unit {
+  display: inline-block;
 }
-.info-unit{
+.info-unit {
   vertical-align: top;
 }
-.type-name{
+.type-name {
   font-size: 18px;
-
 }
-.type-number{
+.type-number {
   font-size: 18px;
-  color:#ff9600;
+  color: #ff9600;
 }
-.type-number i{
+.type-number i {
   font-style: normal;
   font-size: 12px;
 }
-@media screen and (min-width: 1921px)
-{
+@media screen and (min-width: 1921px) {
   .header {
-    padding-top:2%;
+    padding-top: 2%;
   }
-  .data-info{
-    position:relative;
+  .data-info {
+    position: relative;
   }
-  .auto-data{
-    width:100%;
+  .auto-data {
+    width: 100%;
     height: 50%;
-    position:absolute;
-    top:50%;
+    position: absolute;
+    top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
   }
 }
-@media screen and (min-height: 588px)
-{
-  .data-info h5{
-    margin:0;
-    padding:0;
+@media screen and (min-height: 588px) {
+  .data-info h5 {
+    margin: 0;
+    padding: 0;
+  }
+}
+/* 滚动数字css */
+.dataNums {
+  position: absolute;
+  display: block;
+  height: 160px;
+  text-align: center;
+  left: 0;
+}
+
+.dataNums .dataOne {
+  width: 100px;
+  height: 160px;
+  margin: 0px 3px;
+  text-align: center;
+  background: none;
+  font-family: "Arial";
+  border-radius: 5px;
+  float: left;
+  list-style: none;
+  border: 1px solid blue;
+}
+
+.dataNums .dataBoc {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.dataNums .dataBoc .tt {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.dataNums .tt span {
+  width: 100%;
+  height: 100%;
+  font: bold 54px/75px "Arial";
+  color: #fff5a1;
+  font-size: 170px;
+  line-height: 160px;
+  float: left;
+}
+
+@media screen and (max-width: 1320px) {
+  .dataNums {
+    height: 120px;
+  }
+
+  .dataNums .dataOne {
+    width: 70px;
+    height: 120px;
+  }
+
+  .dataNums .tt span {
+    font-size: 100px;
+    line-height: 120px;
+  }
+
+  .dataLine {
+    line-height: 175px;
   }
 }
 
+.dataNum1 {
+  position: absolute;
+  top: 56%;
+  width: 20%;
+  float: left;
+  /* padding-right: 4%; */
+  color: #fff5a1;
+  font-size: 36px;
+  text-align: center;
+  left: 17%;
+}
+
+.dataNum2 {
+  position: absolute;
+  top: 56%;
+  width: 20%;
+  float: left;
+  color: #fff5a1;
+  font-size: 36px;
+  text-align: center;
+  left: 40%;
+}
+
+.dataNum3 {
+  position: absolute;
+  top: 56%;
+  width: 20%;
+  float: left;
+  padding-left: 5%;
+  color: #fff5a1;
+  font-size: 36px;
+  text-align: center;
+  left: 60%;
+}
+
+.dataIcon {
+  font-size: 67px;
+  float: left;
+  font-style: normal;
+}
 </style>

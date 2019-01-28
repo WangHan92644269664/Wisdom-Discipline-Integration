@@ -16,6 +16,7 @@
     "highcharts": "^7.0.1",
     "particles.js": "^2.0.0",
     "vue": "^2.5.2",
+    "vue-count-to": "^1.0.13",
     "vue-router": "^3.0.1"
   },
   "devDependencies": {
