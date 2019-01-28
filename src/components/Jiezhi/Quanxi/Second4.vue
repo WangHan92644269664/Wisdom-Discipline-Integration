@@ -45,9 +45,9 @@ export default {
     //设置表格第一行的颜色
     getRowClass({ row, column, rowIndex, columnIndex }) {
       if (rowIndex === 0) {
-        return "color:#ffd800;background:#1f2359;border:border:1px solid #040c18";
+        return "color:#ffd800;background:#1f2359;border:border:1px solid #000";
       } else {
-        return "color:#ffd800;background:#1f2359;border:border:1px solid #040c18";
+        return "color:#ffd800;background:#1f2359;border:border:1px solid #000";
       }
     },
     tableRowStyle({ row, rowIndex }) {
@@ -71,25 +71,25 @@ export default {
     color: #fdd600;
   }
   #quanxi  .el-table th,
-  .el-table tr {
+  #quanxi .el-table tr {
     background: #1e2357;
   }
   #quanxi  .el-table td,
-  .el-table th.is-leaf {
-    border-bottom: 1px solid #040c19;
+  #quanxi .el-table th.is-leaf {
+    border-bottom: 1px solid #040c19!important;
   }
   #quanxi  .el-table--border td,
-  .el-table--border th,
-  .el-table__body-wrapper .el-table--border.is-scrolling-left ~ .el-table__fixed {
-    border-right: 1px solid #040c19;
+  #quanxi .el-table--border th,
+  #quanxi .el-table__body-wrapper .el-table--border.is-scrolling-left ~ .el-table__fixed {
+    border-right: 1px solid #040c19!important;
   }
   #quanxi  .el-table--border,
-  .el-table--group {
+  #quanxi .el-table--group {
     border: none;
   }
   #quanxi  .el-table--border::after,
-  .el-table--group::after,
-  .el-table::before {
+  #quanxi .el-table--group::after,
+  #quanxi .el-table::before {
     background: #1e2357;
   }
   #quanxi  .el-table--enable-row-hover .el-table__body tr:hover > td {

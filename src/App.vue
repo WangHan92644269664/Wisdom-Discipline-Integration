@@ -121,7 +121,7 @@
     letter-spacing: 0.1em;
   }
   .el-menu-item-group__title{
-    padding: 0;
+    padding: 0!important;
   }
   .el-aside{
      background:#fff;
