@@ -32,21 +32,14 @@
               <div class="info-top">
                 <el-col :span="8">
                   <h5>现有学员总数</h5>
-                  <!-- <div class="data-number">
+                 <div class="data-number">
                     <span>2</span>
                     <span>4</span>
                     <span>2</span>
                     <span>1</span>
                     人
-                  </div>-->
-                  <div class="number-grow-warp">
-                    <span
-                      ref="numberGrow"
-                      :data-time="time"
-                      class="number-grow"
-                      :data-value="value"
-                    >0</span>
                   </div>
+
                 </el-col>
                 <el-col :span="8">
                   <h5>全年日均人数</h5>
